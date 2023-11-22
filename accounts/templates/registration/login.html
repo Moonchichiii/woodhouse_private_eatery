@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+
+            <form method="post" action="{% url 'accounts:login' %}">
+                
+                {% csrf_token %}
+                {% bootstrap_form form %}
+
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success btn-sm">Login</button>
+
+                    {% if request.GET.next %}
+
+                    <input type="hidden" name="next" value="{{ request.GET.next }}">
+
+                    {% endif %}
+
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

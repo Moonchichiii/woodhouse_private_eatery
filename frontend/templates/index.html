@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<h1>Landing page!!!! </h1>
+
+
+<a href="{% url 'accounts:signup' %}" class="btn btn-light">Sign up</a>
+
+
+<a href="{% url 'accounts:login' %}" class="btn btn-light">Login</a>
+
+{% endblock %}

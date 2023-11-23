@@ -2,19 +2,27 @@
 {% load django_bootstrap5 %}
 
 {% block content %}
-<div class="container mt-3">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <form method="post" action="{% url 'bookings:make_booking' %}">
-                {% csrf_token %}        
-                {% bootstrap_form form %}
 
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-success btn-sm">Book Table</button>
-                    <a href="{% url 'bookings:booking_dashboard' %}" class="btn btn-secondary btn-sm">Return to Dashboard</a>              
+
+<div class="card">
+    <h4 class="card-title">Book a table!</h4>
+    <div class="card-body">
+        <form method="post" action="{% url 'bookings:make_booking' %}" class="row g-3">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success btn-sm">Book Table</button>
+                <a href="{% url 'bookings:booking_dashboard' %}" class="btn btn-secondary btn-sm">Return to
+                    Dashboard</a>
                 </div>
             </form>
         </div>
-    </div>
+        <div>
+        </div>
 </div>
+
+
+
+
 {% endblock %}

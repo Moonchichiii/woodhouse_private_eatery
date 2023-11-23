@@ -25,7 +25,7 @@ def make_booking_view(request):
             return redirect('bookings:booking_confirmation', booking_id=booking.id)            
     else:
         form = BookingsForm()
-    return render(request, 'make_booking_form.html', {'form': form})
+    return render(request, 'bookings/make_booking_form.html', {'form': form})
 
     
 @login_required

@@ -115,7 +115,7 @@ footer {
 .nav-link {
     color: var(--heading-text) !important;
     font-family: 'Nunito', sans-serif !important;
-    font-size: 1.25rem !important;
+    font-size: clamp(0.9rem, 2.5vw, 1.25rem)!important;    
     font-weight: 600 !important;
 }
 
@@ -151,6 +151,8 @@ main {
     font-size: 1.2rem;
     
 }
+
+
 .login-signup {
     background-color: var(--login-signup)!important;
     color:var(--heading-text)!important;
@@ -237,6 +239,19 @@ footer {
 }
 
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline:var(--btn-hover);
+    background-color: transparent!important;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: none!important;
+    color:var(--button-normal-red)!important;
+}
+
+
+
 #map {
     width: 250px;
     height: 250px;
@@ -271,8 +286,8 @@ i:hover {
 @media (max-width: 992px) {
     .nav-link {
         color: var(--heading-text) !important;
-        font-family: 'Nunito', sans-serif !important;
-        font-size: 1.5rem !important;
+        font-family: 'Nunito', sans-serif !important;       
+        font-size: 1rem; 
         font-weight: 500 !important;
 
     }
@@ -297,39 +312,40 @@ i:hover {
     #map-section {
         order: 2;
     }
-
+    
+    
 }
 
 
 
 
-
-@media (max-width: 498px) {
+@media (min-width: 498px) {
 
 main {
     margin-top: 4rem;
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
     width: 90%;
-    height: 80vh;
-    padding-bottom: 12rem;
+    height: 100vh;
+    padding-bottom: 22rem;
 }
 
 footer {
-    margin-top: 4rem;
+    margin-top: 25rem;
     background-color: var(--footer) !important;
     padding: 33px 0;    
     position: relative;
 }
 
+
 }
 
-@media (max-width: 378px) { 
+@media (min-width: 378px) { 
     main {
-        margin-top: 4rem;
-        margin-bottom: 5rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
         width: 90%;
         height: 100vh;
-        padding-bottom: 30rem;
+        padding-bottom: 25rem;
     }
     
     footer {
@@ -338,5 +354,5 @@ footer {
         padding: 33px 0;    
         position: relative;
     }
-    
+   
 }

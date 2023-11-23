@@ -4,27 +4,28 @@
 
 {% block content %}
 
-<div class="container mt-3">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
+<div class="card" style="width: 18rem;">    
+    <div class="card-body">
+      <h5 class="card-title">Login to Book!</h5>      
+    </div>
+    <div class="card-body">
+    
 
 
+        <form method="post" action="{% url 'accounts:signup' %}">
+            {% csrf_token %}
+            {% bootstrap_form form %}
 
-            <form method="post" action="{% url 'accounts:signup' %}">
-                {% csrf_token %}
-                {% bootstrap_form form %}
 
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn BTN-GREEN btn-sm">Sign up</button>
+                
+            </div>
 
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-success btn-sm">Sign up</button>
-                    
-                </div>
-
-            </form>
-
-            
-        </div>
+        </form>
     </div>
 </div>
+
+
 
 {% endblock %}

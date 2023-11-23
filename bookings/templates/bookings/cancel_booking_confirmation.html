@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+<div class="container mt-3">
+
+    <a href="{% url 'bookings:booking_dashboard' %}" class="btn btn-secondary btn-sm">Return to Dashboard</a>
+</div>
+
+{% endblock %}

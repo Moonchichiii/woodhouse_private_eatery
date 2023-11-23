@@ -16,20 +16,44 @@ def booking_dashboard_view(request):
 
     
 def make_booking_view(request):
-    pass
+    if request.method == 'POST':
+        form = BookingsForm(request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
+            return redirect('bookings:booking_confirmation', booking_id=booking.id)            
+    else:
+        form = BookingsForm()
+    return render(request, 'make_booking_form.html', {'form': form})
 
     
-
+@login_required
 def edit_booking_view(request, booking_id):
-    pass
+    booking = get_object_or_404(Bookings, id=booking_id, user=request.user)
+    if request.method == 'POST':
+        form = BookingsForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('bookings:booking_dashboard')
+    else:
+        form = BookingsForm(instance=booking)
+    return render(request, 'edit_booking.html', {'form': form, 'booking': booking})
+   
 
 
-def booking_confirmation(request):
-    pass
+@login_required
+def booking_confirmation(request, booking_id):
+    booking = get_object_or_404(Bookings, id=booking_id, user=request.user)
+    return render(request, 'booking_confirmation.html', {'booking': booking})
 
 
-def cancel_booking_view(request):
-    pass
+
+@login_required
+def cancel_booking_view(request, booking_id):
+    booking = get_object_or_404(Bookings, id=booking_id, user=request.user)
+    booking.delete()  
+    return redirect('bookings:booking_dashboard')
 
 
 

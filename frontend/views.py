@@ -6,3 +6,13 @@ from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 def index(request):
     return render(request,'index.html')
 
+
+def terms(request):
+     return render(request,'terms.html')
+
+
+def privacy(request):
+     return render(request,'privacy.html')
+
+
+

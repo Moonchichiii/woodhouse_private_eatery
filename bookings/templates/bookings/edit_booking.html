@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <form method="post" action="{% url 'bookings:edit_booking' booking_id=booking.id %}" class="form">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Edit Booking</button>
+                    <a href="{% url 'bookings:booking_dashboard' %}" class="btn btn-secondary btn-sm">Return to Dashboard</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

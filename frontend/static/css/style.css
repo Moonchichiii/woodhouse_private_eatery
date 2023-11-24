@@ -192,6 +192,14 @@ footer {
 
 
 /* 6. components ---------*/
+
+#cancel_booking {
+    display: none;
+    
+}
+
+
+
 .BTN-GREEN {
     background-color: var(--button-normal-green) !important;
     color: var(--section-text) !important;

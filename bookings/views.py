@@ -27,6 +27,17 @@ def make_booking_view(request):
         form = BookingsForm()
     return render(request, 'bookings/make_booking_form.html', {'form': form})
 
+
+
+
+
+
+def booking_confirmation(request, booking_id):
+    booking = get_object_or_404(Bookings, id=booking_id, user=request.user)
+    return render(request, 'bookings/booking_confirmation.html', {'booking': booking})
+
+
+
     
 @login_required
 def edit_booking_view(request, booking_id):
@@ -38,14 +49,8 @@ def edit_booking_view(request, booking_id):
             return redirect('bookings:booking_dashboard')
     else:
         form = BookingsForm(instance=booking)
-    return render(request, 'edit_booking.html', {'form': form, 'booking': booking})
+    return render(request, 'bookings/edit_booking.html', {'form': form, 'booking': booking})
    
-
-
-@login_required
-def booking_confirmation(request, booking_id):
-    booking = get_object_or_404(Bookings, id=booking_id, user=request.user)
-    return render(request, 'booking_confirmation.html', {'booking': booking})
 
 
 

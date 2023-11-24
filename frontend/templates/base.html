@@ -20,7 +20,7 @@
             <a class="navbar-brand" href="{% url 'frontend:index' %}">
                 <img src="https://res.cloudinary.com/dgve5ifit/image/upload/v1700635712/static/navlogo_k71vyy.png"
                     alt="">
-                WoodHouse Bookings
+                <h2>WoodHouse Bookings</h2>
             </a>
             <button class="navbar-toggler bg-transparent" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -145,7 +145,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_API_KEY }}&callback=initMap"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_API_KEY }}&callback=initMap"></script>
     </script>
 
     {% include "gallery.html" %}

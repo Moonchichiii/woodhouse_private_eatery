@@ -1,5 +1,13 @@
 # woodhouse_private_eatery
 
+
+
+
+
+
+
+
+
 Layout of the project:
 
 -   **Backend**: This is the project folder / base 
@@ -33,4 +41,6 @@ urlpatterns = [
 ]
 
 
-done a few attempts and got stuck on some issues and messed up a few attempts of this project, so fresh start, without doing 10 deployments still with issues... 
+https://stackoverflow.com/questions/74227268/how-to-make-a-date-picker-that-does-not-select-previous-dates-in-django
+
+

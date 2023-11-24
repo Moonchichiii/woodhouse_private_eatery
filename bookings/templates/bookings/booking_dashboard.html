@@ -6,68 +6,82 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Booking DashBoard</h5>
+
             <p>Welcome, {{ request.user.username }}</p>
 
-            {% if bookings %}
-            <table class="table text-center">
 
-                <tr>
-                    <th scope="row">Name:</th>
-                    <td scope="col">
-                        {% if booking.first_name and booking.last_name %}
-                        {{ booking.first_name }} {{ booking.last_name }}
-                        {% else %}
-                        Not specified
-                        {% endif %}
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">Number of Guests:</th>
-                    <td scope="col">
-                        {% if booking.number_of_guests %}
-                        {{ booking.number_of_guests }}
-                        {% else %}
-                        Not specified
-                        {% endif %}
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">Date & Time:</th>
-                    <td scope="col">
-                        {% if booking.date and booking.time %}
-                        {{ booking.date }} at {{ booking.time }}
-                        {% else %}
-                        Not specified
-                        {% endif %}
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">Contact Email:</th>
-                    <td scope="col">
-                        {% if booking.email %}
-                        {{ booking.email }}
-                        {% else %}
-                        Not specified
-                        {% endif %}
-                    </td>
-                </tr>
-            </tbody>            
-            </table>
-        </div>
-        </div>
-        </div>
+            {% if bookings %}
+
                 {% for booking in bookings %}
-                <a href="{% url 'bookings:edit_booking' booking_id=booking.id %}">Edit this booking</a>
-                <a href="{% url 'bookings:cancel_booking' booking_id=booking.id %}">Cancel</a>
+
+                    <table class="table text-center">
+                        <tr>
+                            <th scope="row">Name:</th>
+
+                            <td>{{ booking.first_name|default:"Not specified" }} {{ booking.last_name|default:"" }}</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Number of Guests:</th>
+
+                            <td>{{ booking.number_of_guests|default:"Not specified" }}</td>
+
+                        </tr>
+                        <tr>
+                            
+                            <th scope="row">Date & Time:</th>
+                            <td>{{ booking.date|date:"Y-m-d" }} at {{ booking.time|date:"H:i" }}</td>
+
+                        </tr>
+                        <tr>
+
+                            <th scope="row">Contact Email:</th>
+
+                            <td>{{ booking.email|default:"Not specified" }}</td>
+
+                        </tr>
+                    </table>
+
+                    <a href="{% url 'bookings:edit_booking' booking_id=booking.id %}" class="btn btn-outline-dark btn-sm">Edit this booking</a>
+                    
+                    <a href="{% url 'bookings:cancel_booking' booking_id=booking.id %}" class="btn btn-outline-dark btn-sm">Cancel</a>
 
                 {% endfor %}
+
             {% else %}
                 <a href="{% url 'bookings:make_booking' %}" class="btn btn-outline-dark btn-sm">Book a table</a>
             {% endif %}
-            
-           
+
             <a href="{% url 'accounts:logout' %}" class="btn btn-outline-dark btn-sm">Logout</a>
+
         </div>
     </div>
 </div>
 {% endblock %}
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

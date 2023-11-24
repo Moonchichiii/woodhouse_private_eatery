@@ -1,5 +1,13 @@
 # woodhouse_private_eatery
 
+
+
+
+
+
+
+
+
 Layout of the project:
 
 -   **Backend**: This is the project folder / base 
@@ -39,4 +47,3 @@ https://stackoverflow.com/questions/74227268/how-to-make-a-date-picker-that-does
 
 https://stackoverflow.com/questions/35752873/is-it-possible-to-exclude-footer-html-which-is-included-in-base-html-when-i-exte
 
-https://www.w3schools.com/django/showdjango.php?filename=demo_templates_include2

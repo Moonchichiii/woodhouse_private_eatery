@@ -33,8 +33,7 @@
                         <a href="{% url 'menu:menu' %}" class="nav-link">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" data-bs-toggle="modal"
-                            data-bs-target="#galleryModal">Gallery</a>
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#galleryModal">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'menu:recipe' %}" class="nav-link">Recipes</a>
@@ -59,7 +58,6 @@
     </nav>  
   
 </header>
-
 <nav class="navbar navbar-light bg-light button-header">
     <div class="container-fluid">
         <span class="d-flex justify-content-center">
@@ -69,7 +67,6 @@
     </div>
     </div>
 </nav>
-
 
     <main class="py-4">
         {% block content %}
@@ -156,6 +153,7 @@
 
     {% include "terms.html" %}
     {% include "privacy.html" %}
+    {% include 'gallery.html' %}
 
 
 </body>

@@ -8,25 +8,36 @@
 
 
 
-Layout of the project:
-
--   **Backend**: This is the project folder / base 
-
--   **App - Frontend**: The base of the frontend templates index.html / base.html
-
--   **App Accounts**: To gain access to the private eatery sign up & and login to book your table.
-
--   **App Bookings**: Handles the booking side of the project. 
 
 
-- -   **App Menu**: For mangers of the site to easily change the menu and prices on the site. 
 
 
-for the forms will use bootstraps form tags where i can,for ease of use . 
 
-and also going with bootstrap cdn to make site responsive and out of the box layouts. 
 
-https://django-bootstrap5.readthedocs.io/en/latest/templatetags.html 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -41,9 +52,18 @@ urlpatterns = [
 ]
 
 
-Where i found the idea for the not making bookings in the past 
-https://stackoverflow.com/questions/74227268/how-to-make-a-date-picker-that-does-not-select-previous-dates-in-django
+Where i found the idea for the not making bookings in the past:
+- https://stackoverflow.com/questions/74227268/how-to-make-a-date-picker-that-does-not-select-previous-dates-in-django
 
 
-https://stackoverflow.com/questions/35752873/is-it-possible-to-exclude-footer-html-which-is-included-in-base-html-when-i-exte
+where i came across the login_view: 
+- https://forum.djangoproject.com/t/redirecting-user-to-page-after-login/14603/9
+
+
+include tags useful for the login flow to remove the login and sign up buttons : 
+- https://www.w3schools.com/django/showdjango.php?filename=demo_templates_include2
+
+Exclude tags: 
+- https://stackoverflow.com/questions/35752873/is-it-possible-to-exclude-footer-html-which-is-included-in-base-html-when-i-exte
+
 

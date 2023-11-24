@@ -1,29 +1,8 @@
 {% extends 'base.html' %}
 {% load django_bootstrap5 %}
 
-
-
-{% block navbar %}
-    {% if not request.user.is_authenticated %}
-<nav class="navbar navbar-light bg-light button-header">
-    <div class="container-fluid">
-        <span class="d-flex justify-content-center">
-            <a href="{% url 'accounts:signup' %}" class="btn BTN-BLUE lg me-3">Sign up</a>
-            <a href="{% url 'accounts:login' %}" class="btn BTN-BLUE lg">Login</a>
-        </span>
-    </div>
-    </div>
-</nav>
-{% endif %}
-{% endblock %}
-
-
-
-
-{% block content %}
-
-
-<div class="container mt-3 booking-dash">
+{% block content %}     
+<div class="container mt-3">
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Booking DashBoard</h5>
@@ -62,27 +41,7 @@
 
                         </tr>
                     </table>
-
-
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown button
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                      </div>
-
-
-
-
-
-                    
-
-                    <a href="{% url 'bookings:edit_booking' booking_id=booking.id %}" class="btn btn-outline-dark btn-sm">Edit this booking</a>                                        
+                                
                     
                     <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#yousure{{ booking.id }}">Cancel</button>
 

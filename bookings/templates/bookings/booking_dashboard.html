@@ -42,10 +42,46 @@
                         </tr>
                     </table>
 
-                    <a href="{% url 'bookings:edit_booking' booking_id=booking.id %}" class="btn btn-outline-dark btn-sm">Edit this booking</a>
-                    
-                    <a href="{% url 'bookings:cancel_booking' booking_id=booking.id %}" class="btn btn-outline-dark btn-sm">Cancel</a>
 
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+
+
+
+
+
+                    
+
+                    <a href="{% url 'bookings:edit_booking' booking_id=booking.id %}" class="btn btn-outline-dark btn-sm">Edit this booking</a>                                        
+                    
+                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#yousure{{ booking.id }}">Cancel</button>
+
+                    <div class="modal fade" id="yousure{{ booking.id }}" tabindex="-1" role="dialog" aria-labelledby="CancelBookingModalAreYouSure" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Cancel your booking?</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to cancel this booking?</p>
+                                    <div class="modal-footer">
+                                        <a href="{% url 'bookings:cancel_booking' booking_id=booking.id %}" class="btn btn-outline-dark btn-sm">Confirm Cancel</a>
+                                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 {% endfor %}
 
             {% else %}
@@ -57,31 +93,10 @@
         </div>
     </div>
 </div>
+
+
+  
 {% endblock %}
 
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Launch demo modal
-  </button>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>

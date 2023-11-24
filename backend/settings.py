@@ -60,7 +60,9 @@ INSTALLED_APPS = [
 
 LOGIN_REDIRECT_URL = 'bookings:booking_dashboard'
 
-LOGOUT_REDIRECT_URL = 'frontend:index'
+LOGOUT_REDIRECT_URL = 'accounts:logout'
+
+
 
 
 

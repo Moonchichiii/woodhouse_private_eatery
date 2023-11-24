@@ -190,6 +190,13 @@ footer {
     position: relative;
 }
 
+.privacy-text {
+    font-size:0.5rem;    
+    font-weight: 400;      
+
+}
+
+
 
 /* 6. components ---------*/
 

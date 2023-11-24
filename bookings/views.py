@@ -9,13 +9,15 @@ from .models import Bookings
 
 
 @login_required
-def booking_dashboard_view(request):        
+def booking_dashboard_view(request):
+    """ """
     user_bookings = Bookings.objects.filter(user=request.user)
     return render(request, 'bookings/booking_dashboard.html', {'bookings': user_bookings})
 
 
     
 def make_booking_view(request):
+    """ """
     if request.method == 'POST':
         form = BookingsForm(request.POST)
         if form.is_valid():
@@ -31,7 +33,7 @@ def make_booking_view(request):
 
 
 
-
+@login_required
 def booking_confirmation(request, booking_id):
     booking = get_object_or_404(Bookings, id=booking_id, user=request.user)
     return render(request, 'bookings/booking_confirmation.html', {'booking': booking})

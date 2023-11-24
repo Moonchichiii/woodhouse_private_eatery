@@ -42,11 +42,19 @@
                         </tr>
                     </table>
 
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert" id="cancel_booking">
-                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                        <button type="button" class="btn-close" aria-label="Close" id="cancelButton"></button>
-                    </div>
-                    
+
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+
 
 
 
@@ -86,13 +94,6 @@
     </div>
 </div>
 
-<script>
-    
-document.getElementById('cancelButton').addEventListener('click', function() {
-    document.getElementById('cancel_booking').style.display = 'block';
-});
-
-</script>
 
   
 {% endblock %}

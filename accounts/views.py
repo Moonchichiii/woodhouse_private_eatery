@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import login
+from django.contrib.auth import login ,logout
+
+
 
 
 # Create your views here.
@@ -20,3 +22,12 @@ def signup_view(request):
     else:
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
+
+
+
+def Logout_View(request):
+    logout(request)
+    return render(request, 'registration/logout.html')
+
+
+

@@ -59,8 +59,7 @@
     </nav>  
   
 </header>
-{% block navbar %}
-    {% if not request.user.is_authenticated %}
+
 <nav class="navbar navbar-light bg-light button-header">
     <div class="container-fluid">
         <span class="d-flex justify-content-center">
@@ -70,8 +69,8 @@
     </div>
     </div>
 </nav>
-{% endif %}
-{% endblock %}
+
+
     <main class="py-4">
         {% block content %}
 
@@ -96,8 +95,13 @@
                     </address>
                     <p>&copy; 2023 Woodhouse Bookings Ltd. All rights reserved.</p>
                     <p>
-                        <a href="{% url 'frontend:terms' %}" class="link-terms-policy">Terms of Service</a> |
-                        <a href="{% url 'frontend:terms' %}" class="link-terms-policy">Privacy Policy</a>
+                        <a type="button" class="link-terms-policy" data-bs-toggle="modal" data-bs-target="#termsModal">
+                            Terms of Service
+                        </a>
+                        |
+                        <a type="button" class="link-terms-policy" data-bs-toggle="modal" data-bs-target="#privacyModal">
+                            Privacy Policy
+                        </a>
                     </p>
                 </div>
 
@@ -150,7 +154,8 @@
     <script async src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_API_KEY }}&callback=initMap"></script>
     </script>
 
-    {% include "gallery.html" %}
+    {% include "terms.html" %}
+    {% include "privacy.html" %}
 
 
 </body>

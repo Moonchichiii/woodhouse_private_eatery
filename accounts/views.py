@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login ,logout
 from django.contrib import messages
+from django.conf import settings
 
 
 
@@ -10,6 +11,7 @@ from django.contrib import messages
 # Create your views here.
 
 def signup_view(request):
+    context = {'GOOGLE_API_KEY': settings.GOOGLE_API_KEY}
     """
     Signup view, once signed up, the user is redirected to the bookig dashboard  """
     if request.method == 'POST':
@@ -21,11 +23,12 @@ def signup_view(request):
             
     else:
         form = UserCreationForm()
-    return render(request, 'registration/signup.html', {'form': form})
+    return render(request, 'registration/signup.html', {'form': form}, context)
 
  
 
 def login_view(request):
+    context = {'GOOGLE_API_KEY': settings.GOOGLE_API_KEY}
     """ Shared login / for  guests and staff """
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
@@ -40,15 +43,16 @@ def login_view(request):
             messages.error(request, 'Wrong username or password.')
     else:
         form = AuthenticationForm()
-    return render(request, 'registration/login.html', {'form': form})
+    return render(request, 'registration/login.html', {'form': form}, context)
 
 
 
 
 def Logout_View(request):
+    context = {'GOOGLE_API_KEY': settings.GOOGLE_API_KEY}
     """ Standard django Logout / with a different redirect. """
     logout(request)
-    return render(request, 'registration/logout.html')
+    return render(request, 'registration/logout.html', context)
 
 
 

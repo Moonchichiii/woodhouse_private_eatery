@@ -286,6 +286,13 @@ footer {
     text-overflow: ellipsis;
 }
 
+.upcoming-events img {
+    width: 150px;
+    height: 150px;
+    padding: 0 0.5px;
+    border-radius: 15px;
+}
+
 .about-us {        
     padding: 0 10px;    
     

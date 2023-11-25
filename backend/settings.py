@@ -7,8 +7,6 @@ import dj_database_url
 
 GOOGLE_API_KEY = config('GOOGLE_API_KEY')
 
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -18,23 +16,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-
-#CLOUDINARY_STORAGE = {
-#    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
-#    'API_KEY': config('CLOUDINARY_API_KEY'),
-#    'API_SECRET': config('CLOUDINARY_API_SECRET')
-#}
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': config('CLOUDINARY_API_KEY'),
+    'API_SECRET': config('CLOUDINARY_API_SECRET')
+}
 
 SECRET_KEY = config('SECRET_KEY')
 
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['8000-moonchichiii-woodhouse-p-21gcbyfg33.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['woodhouse-6b4519e75518.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-moonchichiii-woodhouse-p-21gcbyfg33.us2.codeanyapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://woodhouse-6b4519e75518.herokuapp.com']
 
 # Application definition
 
@@ -42,9 +39,12 @@ INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
+    "django.contrib.sessions",       
+    "django.contrib.messages",    
+    "cloudinary",
+    "django.contrib.staticfiles",    
+    "cloudinary_storage",
+    "corsheaders",
 
     'django_bootstrap5',
 
@@ -101,15 +101,8 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 
-#DATABASES = {'default': dj_database_url.config(default=config('DATABASE_URL'))}
+DATABASES = {'default': dj_database_url.config(default=config('DATABASE_URL'))}
 
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
 
 
 # Password validation
@@ -149,18 +142,13 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
-#STATIC_ROOT = BASE_DIR / 'staticfiles'
+MEDIA_URL = '/media/'
 
-#STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-
-#MEDIA_URL = '/media/'
-
-#DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-
-
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

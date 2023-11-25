@@ -10,8 +10,7 @@ from django.conf import settings
 
 # Create your views here.
 
-def signup_view(request):
-    context = {'GOOGLE_API_KEY': settings.GOOGLE_API_KEY}
+def signup_view(request):    
     """
     Signup view, once signed up, the user is redirected to the bookig dashboard  """
     if request.method == 'POST':
@@ -23,12 +22,11 @@ def signup_view(request):
             
     else:
         form = UserCreationForm()
-    return render(request, 'registration/signup.html', {'form': form}, context)
+    return render(request, 'registration/signup.html', {'form': form})
 
  
 
-def login_view(request):
-    context = {'GOOGLE_API_KEY': settings.GOOGLE_API_KEY}
+def login_view(request):    
     """ Shared login / for  guests and staff """
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
@@ -43,16 +41,15 @@ def login_view(request):
             messages.error(request, 'Wrong username or password.')
     else:
         form = AuthenticationForm()
-    return render(request, 'registration/login.html', {'form': form}, context)
+    return render(request, 'registration/login.html', {'form': form})
 
 
 
 
-def Logout_View(request):
-    context = {'GOOGLE_API_KEY': settings.GOOGLE_API_KEY}
+def Logout_View(request):    
     """ Standard django Logout / with a different redirect. """
     logout(request)
-    return render(request, 'registration/logout.html', context)
+    return render(request, 'registration/logout.html')
 
 
 

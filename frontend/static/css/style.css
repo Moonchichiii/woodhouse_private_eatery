@@ -114,7 +114,7 @@ footer {
 .nav-link {
     color: var(--heading-text) !important;
     font-family: 'Nunito', sans-serif !important;
-    font-size: clamp(0.9rem, 2.5vw, 1.25rem)!important;    
+    font-size: clamp(1.5rem, 5vw + 1rem, 0.9rem);
     font-weight: 600 !important;
 }
 
@@ -287,15 +287,15 @@ footer {
 }
 
 .upcoming-events img {
-    width: 150px;
-    height: 150px;
+    width: 100%; 
+    height: auto; 
     padding: 0 0.5px;
     border-radius: 15px;
+    max-width: 350px;   
 }
 
 .about-us {        
-    padding: 0 10px;    
-    
+    padding: 0 10px;   
     font-size: 1.2rem;
     text-overflow: ellipsis;
     
@@ -324,34 +324,8 @@ i:hover {
 
 /* 7. media queries ---------*/
 
-@media screen and (max-height: 500px) {
-    .nav-link {
-        color: var(--heading-text) !important;
-        font-family: 'Nunito', sans-serif !important;       
-        font-size: 1.3rem; 
-        font-weight: 500 !important;
-
-    }
-    main {
-        margin-bottom: 50rem; 
-    }
-
-    footer {
-        margin-top: 50rem; 
-    }
-    
-}
 
 @media (max-width: 992px) {
-    .nav-link {
-        color: var(--heading-text) !important;
-        font-family: 'Nunito', sans-serif !important;       
-        font-size: 1.3rem; 
-        font-weight: 500 !important;
-
-    }
-       
-
     .row {
         display: flex;
         flex-direction: column;
@@ -375,14 +349,54 @@ i:hover {
     
 }
 
-@media (max-width: 411px) {
-    .nav-link {
-        color: var(--heading-text) !important;
-        font-family: 'Nunito', sans-serif !important;       
-        font-size: 1.3rem; 
-        font-weight: 500 !important;
-
+@media (max-width: 768px) {    
+    .upcoming-events img {
+        max-width: 100%;
     }
+    .upcoming-events {
+        padding: 0 10px;        
+        font-size: 1.2rem;    
+        text-align: center;
+    }    
+    
+    .about-us {
+        margin-top:5px;        
+        padding: 0 10px;        
+        font-size: 1.2rem;
+        text-align: center;
+        
+    }
+    
+}
+
+@media screen and (max-height: 500px) {    
+    main {
+        margin-bottom: 50rem; 
+    }
+
+    footer {
+        margin-top: 50rem; 
+    }
+    .upcoming-events img {
+        max-width: 100%;
+    }
+    .upcoming-events {
+        padding: 0 10px;        
+        font-size: 1.2rem;    
+        text-align: center;
+    }    
+    
+    .about-us {        
+        padding: 0 10px;        
+        font-size: 1.2rem;
+        text-align: center;
+        
+    }
+
+    
+}
+
+@media (max-width: 411px) {    
     main {
         margin-top: 4rem;
         margin-bottom: 4rem;
@@ -401,14 +415,6 @@ i:hover {
 }
 
 @media (min-width: 498px) {
-    .nav-link {
-        color: var(--heading-text) !important;
-        font-family: 'Nunito', sans-serif !important;       
-        font-size: 1.3rem; 
-        font-weight: 500 !important;
-
-    }
-
 main {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -427,19 +433,10 @@ footer {
 }
 
 @media (min-width: 378px) { 
-    .nav-link {
-        color: var(--heading-text) !important;
-        font-family: 'Nunito', sans-serif !important;       
-        font-size: 1.3rem; 
-        font-weight: 500 !important;
-
-    }
     main {
         margin-top: 3rem;
         margin-bottom: 3rem;
-        width: 90%;
-        
- 
+        width: 90%; 
     }
     
     footer {

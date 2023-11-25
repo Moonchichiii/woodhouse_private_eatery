@@ -54,9 +54,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-var myModal = document.getElementById('modal')
-var myInput = document.getElementById('modal')
-
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
+*/

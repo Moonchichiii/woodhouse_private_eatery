@@ -182,7 +182,7 @@ main {
 .menu-text ul li {
     color:var(--btn-hover);
     font-family: 'Nunito', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
     list-style: none;
     padding-bottom: 5px;

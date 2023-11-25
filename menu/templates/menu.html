@@ -10,8 +10,7 @@
 
                 <div class="card-body">
 
-                    <h4 class="card-title text-center">Evening Menu</h4>
-
+                    <h3 class="card-title text-center">Evening Menu</h3>
                         <h5 class="text-center">Starters</h5>
                         <ul class="menu-text text-center">
                             {% for starter in starters %}
@@ -19,7 +18,7 @@
                                 {{ starter.name }}
                             </li>
                             <td>
-                            ${{ starter.price }}
+                            €{{ starter.price }}
                             </td>
                             {% endfor %}
                         </ul>
@@ -31,7 +30,7 @@
                                 {{ main_course.name }}
                             </li>
                             <td>
-                                ${{ main_course.price }}
+                              €{{ main_course.price }}
                             </td>
                             {% endfor %}
                         </ul>
@@ -43,7 +42,7 @@
                                 {{ dessert.name }}
                             </li>
                             <td>
-                                ${{ dessert.price }}
+                                €{{ dessert.price }}
                             </td>
                             {% endfor %}
                         </ul>

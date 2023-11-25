@@ -3,16 +3,12 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login ,logout
 from django.contrib import messages
-from django.conf import settings
-
-
 
 
 # Create your views here.
 
-def signup_view(request):    
-    """
-    Signup view, once signed up, the user is redirected to the bookig dashboard  """
+def signup_view(request):
+    """ Signup view, once signed up, the user is redirected to the bookig dashboard"""
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():

@@ -16,8 +16,7 @@ def menu_view(request):
     main_courses = Menu.objects.filter(category=MAIN_COURSE)
     desserts = Menu.objects.filter(category=DESSERT)
 
-    context = {
-        'GOOGLE_API_KEY': settings.GOOGLE_API_KEY,
+    context = {        
         'starters': starters, 
         'main_courses': main_courses, 
         'desserts': desserts
@@ -27,9 +26,8 @@ def menu_view(request):
 
 
 def recipe_view(request):
-    """ Renders the recipe page. """
-    context = {'GOOGLE_API_KEY': settings.GOOGLE_API_KEY}
-    return render(request,'recipes.html', context)
+    """ Renders the recipe page. """    
+    return render(request,'recipes.html')
 
 
 def gallery_view(request):

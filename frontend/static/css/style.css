@@ -279,17 +279,14 @@ footer {
 }
 
 .upcoming-events {
-    padding: 0 10px;    
-    width: 90%;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    
+    padding: 0 10px;        
+    font-size: 1.2rem;    
+    text-overflow: ellipsis;
 }
 
-.about-us {    
-    margin-top:10px;
+.about-us {        
     padding: 0 10px;    
-    width: 90%;
+    
     font-size: 1.2rem;
     text-overflow: ellipsis;
     

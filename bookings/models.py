@@ -10,7 +10,7 @@ from django.conf import settings
 
 class Bookings(models.Model):    
     
-    GUEST_OPTIONS = [(i,str(i)) for i in range(1,10)]
+    GUEST_OPTIONS = [(i,str(i)) for i in range(1,20)]
 
     TIME_OPTIONS = [
     ('17:00', '5:00 PM'),

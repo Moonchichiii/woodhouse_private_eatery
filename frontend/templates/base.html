@@ -63,6 +63,7 @@
     </header>
 
     {% block navbar %}
+    
     {% if not request.user.is_authenticated %}
     <nav class="navbar navbar-light bg-light button-header">
         <div class="container-fluid">
@@ -73,7 +74,19 @@
         </div>
         </div>
     </nav>
-    {% endif %}
+    {% else %}
+    <nav class="navbar navbar-light bg-light button-header">
+        
+        <div class="container-fluid">
+
+            <span class="d-flex justify-content-center">
+
+                <a href="{% url 'bookings:booking_dashboard' %}" class="btn btn-secondary btn-sm">Return to Dashboard</a>
+
+            </span>
+        </div>
+    </nav>
+    {% endif %}    
     {% endblock %}
 
     <main class="py-4">

@@ -44,6 +44,7 @@ def login_view(request):
 
 
 def Logout_View(request):
+    """ Standard django Logout / with a different redirect. """
     logout(request)
     return render(request, 'registration/logged_out.html')
 

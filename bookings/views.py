@@ -10,14 +10,14 @@ from .models import Bookings
 
 @login_required
 def booking_dashboard_view(request):
-    """ """
+    """ Access only for logged in users """
     user_bookings = Bookings.objects.filter(user=request.user)
     return render(request, 'bookings/booking_dashboard.html', {'bookings': user_bookings})
 
 
     
 def make_booking_view(request):
-    """ """
+    """ Checking for submission, using the BookingForm,  """
     if request.method == 'POST':
         form = BookingsForm(request.POST)
         if form.is_valid():
@@ -35,6 +35,7 @@ def make_booking_view(request):
 
 @login_required
 def booking_confirmation(request, booking_id):
+    """ Passing the booking_id to user that is logged in, and displays it """
     booking = get_object_or_404(Bookings, id=booking_id, user=request.user)
     return render(request, 'bookings/booking_confirmation.html', {'booking': booking})
 
@@ -43,6 +44,7 @@ def booking_confirmation(request, booking_id):
     
 @login_required
 def edit_booking_view(request, booking_id):
+    """ Allows logged in users to edit booking based on booking_id  """
     booking = get_object_or_404(Bookings, id=booking_id, user=request.user)
     if request.method == 'POST':
         form = BookingsForm(request.POST, instance=booking)
@@ -58,6 +60,7 @@ def edit_booking_view(request, booking_id):
 
 @login_required
 def cancel_booking_view(request, booking_id):
+    """ Deletes the booking based on the booking_id  and logged in user.  """
     booking = get_object_or_404(Bookings, id=booking_id, user=request.user)
     booking.delete()  
     return redirect('bookings:booking_dashboard')

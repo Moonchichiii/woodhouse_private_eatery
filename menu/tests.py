@@ -1,6 +1,5 @@
 from django.test import TestCase
 from .views import menu_view, recipe_view, gallery_view
-
 from . models import Menu
 
 

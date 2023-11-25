@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 {% load django_bootstrap5 %}
-
+{% block navbar %}
+    {% if not request.user.is_authenticated %}
+<nav class="navbar navbar-light bg-light button-header">
+    <div class="container-fluid">
+        <span class="d-flex justify-content-center">
+            <a href="{% url 'accounts:signup' %}" class="btn BTN-BLUE lg me-3">Sign up</a>
+            <a href="{% url 'accounts:login' %}" class="btn BTN-BLUE lg">Login</a>
+        </span>
+    </div>
+    </div>
+</nav>
+{% endif %}
+{% endblock %}
 {% block content %}     
 <div class="container mt-3">
     <div class="card">

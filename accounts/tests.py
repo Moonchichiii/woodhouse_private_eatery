@@ -21,7 +21,9 @@ class SignUpTests(TestCase):
         self.login_url = reverse('accounts:login')
 
     def test_signup_view(self):        
+
         response = self.client.post(self.signup_url, self.user_data)
+        
         self.assertTrue(UserModel.objects.filter(username='nilsson').exists())
         self.assertRedirects(response, reverse('bookings:booking_dashboard'))
         

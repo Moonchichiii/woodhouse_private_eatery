@@ -1,6 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from datetime import datetime
+from datetime import datetime, time
 from . models import Bookings
 from django.db import models
 from django.utils import timezone

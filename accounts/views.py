@@ -8,7 +8,7 @@ from django.contrib import messages
 # Create your views here.
 
 def signup_view(request):
-    """ Signup view, once signed up, the user is redirected to the bookig dashboard"""
+    # Signup view, once signed up, the user is redirected to the bookig dashboard
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -23,7 +23,7 @@ def signup_view(request):
  
 
 def login_view(request):    
-    """ Shared login / for  guests and staff """
+    # Shared login / for  guests and staff
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
@@ -43,7 +43,7 @@ def login_view(request):
 
 
 def Logout_View(request):    
-    """ Standard django Logout / with a different redirect. """
+    # Standard django Logout / with a different redirect
     logout(request)
     return render(request, 'registration/logout.html')
 

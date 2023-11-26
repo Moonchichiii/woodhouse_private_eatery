@@ -6,7 +6,7 @@ from django.conf import settings
 
 
 def menu_view(request):
-    """ Getting the menu from the db, and displaying it """
+    # Getting the menu from the db, and displaying it
     
     STARTER = 'Starter'
     MAIN_COURSE = 'Main Course'  
@@ -26,12 +26,12 @@ def menu_view(request):
 
 
 def recipe_view(request):
-    """ Renders the recipe page. """    
+    # Renders the recipe page
     return render(request,'recipes.html')
 
 
 def gallery_view(request):
-    """Renderes Modal Gallery. """
+    # Renderes Modal Gallery
     return render(request,'gallery.html')
 
 

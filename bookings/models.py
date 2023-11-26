@@ -7,7 +7,7 @@ from django.conf import settings
 # Create your models here.
 
 
-class Bookings(models.Model):    
+class Bookings(models.Model):
     
     GUEST_OPTIONS = [(i,str(i)) for i in range(1, 11)]
 

@@ -35,38 +35,43 @@ class BookingsForm(forms.ModelForm):
 
         }
 
-    def clean_date(self):
-        # checking so it's not possible to book past current date,         
+   def clean_date(self):
+        # checking so it's not possible to book past current date,
         date = self.cleaned_data.get("date")
         if date and date < timezone.localdate():
-            raise ValidationError("Date has passed, try again .")
+            raise ValidationError("Date has passed, try again.")
         return date
 
-
     def clean_time(self):
-    # checking that the time has not passed and within the time options limits, set in the models.
         booking_time = self.cleaned_data.get("time")
-        date = self.cleaned_data.get("date")
+        booking_date = self.cleaned_data.get("date")
 
-        if date and date < timezone.localdate():
+        # checking that the time has not passed and within the time options limits, set in the models.
+        if booking_date and booking_date < timezone.localdate():
             raise ValidationError("Can't book in the past!")
 
-        if not (time(18, 0) <= booking_time < time(22, 0)):
-            raise ValidationError("Booking hours are between 18:00 & 22:00,")
+        now = timezone.localtime(timezone.now())
+
+        opening_time = now.replace(hour=17, minute=0)
+        last_booking_time = now.replace(hour=22, minute=0)
+
+        full_booking_datetime = timezone.make_aware(datetime.combine(booking_date, booking_time))
+
+        if full_booking_datetime.date() == now.date() and not (opening_time <= full_booking_datetime.time() <= last_booking_time):
+            raise ValidationError("Booking can only be made between 17:00 and 22:00.")
+        elif full_booking_datetime.date() > now.date() and not (time(17, 0) <= booking_time <= time(22, 0)):
+            raise ValidationError("Booking time must be between 17:00 and 22:00.")
 
         return booking_time
 
-
     def clean(self):
-        # checking that it's returning both date and time  
+        # checking that it's returning both date and time
         cleaned_data = super().clean()
         date = cleaned_data.get("date")
         time = cleaned_data.get("time")
         number_of_guests = cleaned_data.get("number_of_guests", 0)
-        
-        
-        max_guests = 20
 
+        max_guests = 20
 
         if date and time:
             # check if total number of guests if there is already reached on that date and time.
@@ -75,7 +80,7 @@ class BookingsForm(forms.ModelForm):
             )['total_guests'] or 0
 
             if existing_bookings_count + number_of_guests > max_guests:
-                # checking current booking exceeds the maximum guest limit 
+                 # checking current booking exceeds the maximum guest limit 
                 raise ValidationError("Sorry, fully booked! Please choose another time or date")
 
         return cleaned_data

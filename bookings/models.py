@@ -14,7 +14,7 @@ class Bookings(models.Model):
     TIME_OPTIONS = [
         ("17:00", "17:00"),
         ("17:30", "17:30"),
-        ("18:00", "18:80"),
+        ("18:00", "18:00"),
         ("18:30", "18:30"),
         ("19:00", "19:00"),
         ("19:30", "19:30"),
@@ -29,7 +29,7 @@ class Bookings(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='bookings', null=True, blank=True)
     number_of_guests = models.PositiveIntegerField(choices=GUEST_OPTIONS)
     date = models.DateField()
-    time = models.TimeField(max_length=5, choices=TIME_OPTIONS)
+    time = models.TimeField(choices=TIME_OPTIONS)
     first_name = models.CharField(max_length=50, null=False, blank=False)
     last_name = models.CharField(max_length=50, null=False, blank=False)    
     email = models.EmailField(max_length=50, null=False, blank=False)

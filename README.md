@@ -388,7 +388,7 @@ create and account and then you can create your own database, to use in your pro
 
    ***Don't forget to add your config vars to Heroku***
 
-   <img src="/readmecontent/images/configvars.png" alt="Image 15" width="200"/>
+   <img src="/readmecontent/images/configvars.png" alt="Image 15" width="250"/>
    
    
    - Heroku, including `DISABLE_COLLECTSTATIC=1`. when your using Cloudinary

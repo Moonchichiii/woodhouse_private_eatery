@@ -27,8 +27,12 @@
         </form>
     </div>
 </div>
+{% if not hide_map %}
 
-<script async defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_API_KEY }}&callback=initMap"></script>
+<div id="map"></div>
+
+{% endif %}
+
+
+
 {% endblock %}

@@ -20,7 +20,7 @@
             <div class="container-fluid">
 
                 <a class="navbar-brand" href="{% url 'frontend:index' %}">
-                    <img srcset="https://res.cloudinary.com/dgve5ifit/image/upload/v1700635712/static/navlogo_k71vyy.png"
+                    <img src="https://res.cloudinary.com/dgve5ifit/image/upload/v1700635712/static/navlogo_k71vyy.png"
                         alt="" style="width:70px; height:70px;">
                     <h1 class="header-heading">WoodHouse Bookings</h1>
                 </a>
@@ -57,7 +57,7 @@
 
                 </div>
             </div>
-            </div>
+                        
         </nav>
 
     </header>
@@ -71,8 +71,7 @@
                 <a href="{% url 'accounts:signup' %}" class="btn BTN-BLUE lg me-3">Sign up</a>
                 <a href="{% url 'accounts:login' %}" class="btn BTN-BLUE lg">Login</a>
             </span>
-        </div>
-        </div>
+        </div>        
     </nav>
     {% else %}
     {% if not on_dashboard_page %}
@@ -183,7 +182,7 @@
     <script src="https://kit.fontawesome.com/97d1638932.js" crossorigin="anonymous"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_API_KEY }}&callback=initMap"></script>
-    <script src="{% static 'js/script.js' %}"></script>
+        <script src="https://res.cloudinary.com/dgve5ifit/raw/upload/v1/static/js/script.a02ebd16e687.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>    
 
     {% include "terms.html" %}

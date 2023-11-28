@@ -1,6 +1,6 @@
 # Woodhouse Bookings ***private eatery***
 
-**👉 [Link to Live Project]([https://woodhouse-6b4519e75518.herokuapp.com]**
+**👉 [Link to Live Project][https://woodhouse-6b4519e75518.herokuapp.com]**
 
 
 ![screenshot](/readmecontent/images/topof.png)
@@ -344,7 +344,6 @@ create and account and then you can create your own database, to use in your pro
 
 ---
 
-  
 
 ## Hosting Static Assets: Cloudinary
 

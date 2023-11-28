@@ -26,13 +26,14 @@ def menu_view(request):
 
 
 def recipe_view(request):
+    
     # Renders the recipe page
-    return render(request,'recipes.html')
+    return render(request,'recipes.html',{'hide_map': True})
 
 
 def gallery_view(request):
     # Renderes Modal Gallery
-    return render(request,'gallery.html')
+    return render(request,'gallery.html',{'hide_map': True})
 
 
 

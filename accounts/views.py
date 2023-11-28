@@ -18,7 +18,8 @@ def signup_view(request):
             
     else:
         form = UserCreationForm()
-    return render(request, 'registration/signup.html', {'form': form})
+        context = {'form': form, 'hide_map': True}
+    return render(request, 'registration/signup.html',context)
 
  
 
@@ -37,7 +38,8 @@ def login_view(request):
             messages.error(request, 'Wrong username or password.')
     else:
         form = AuthenticationForm()
-    return render(request, 'registration/login.html', {'form': form})
+        context = {'form': form, 'hide_map': True}
+    return render(request, 'registration/login.html',context)
 
 
 
@@ -45,7 +47,7 @@ def login_view(request):
 def Logout_View(request):    
     # Standard django Logout / with a different redirect
     logout(request)
-    return render(request, 'registration/logout.html')
+    return render(request, 'registration/logout.html',{'hide_map': True})
 
 
 

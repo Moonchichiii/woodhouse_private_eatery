@@ -26,6 +26,12 @@
 
 {% block content %}
 
+{% if not hide_map %}
+
+    <div id="map"></div>
+    
+{% endif %}
+
 
   {% include 'shared_index.html' %}
   

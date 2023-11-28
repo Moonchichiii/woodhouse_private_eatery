@@ -5,7 +5,7 @@
 {% block content %}
 
 
-<div class="card" style="width: 18rem;">    
+<div class="card login-card">    
     <div class="card-body">
       <h5 class="card-title">Login to Book!</h5>      
     </div>
@@ -14,9 +14,11 @@
                 
             {% csrf_token %}
             {% bootstrap_form form %}
+            
+            {% bootstrap_form_errors form type='all' %}
+            {% bootstrap_form form layout='horizontal' %}
 
-
-            <div class="d-grid gap-2">
+            <div class="d-grid gap-2">                
                 <button type="submit" class="btn  BTN-GREEN btn-sm">Login</button>
 
                 {% if request.GET.next %}
@@ -27,7 +29,5 @@
             </form>   
     </div>
   </div>
-  <script async defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_API_KEY }}&callback=initMap"></script>
+  
 {% endblock %}

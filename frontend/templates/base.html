@@ -32,27 +32,27 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a href="{% url 'menu:menu' %}" class="nav-link">Menu</a>
+                            <a href="{% url 'menu:menu' %}" class="nav-link" aria-label="dinner menu">Menu</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-bs-toggle="modal"
-                                data-bs-target="#galleryModal">Gallery</a>
+                                data-bs-target="#galleryModal" aria-label="Gallery">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'menu:recipe' %}" class="nav-link">Recipes</a>
+                            <a href="{% url 'menu:recipe' %}" class="nav-link" aria-label="recipe link">Recipes</a>
                         </li>
                     </ul>
                     <div class="d-flex justify-content-center justify-content-lg-end soocial-icons">
 
-                        <a href="http://www.facebook.com" class="nav-link">
+                        <a href="http://www.facebook.com" class="nav-link" aria-label="link to facebook">
                             <i class="fa-brands fa-square-facebook"></i></a>
 
-                        <a href="http://www.pinterest.com" class="nav-link"><i
+                        <a href="http://www.pinterest.com" class="nav-link" aria-label="link to pinterest"><i
                                 class="fa-brands fa-square-pinterest"></i></a>
 
-                        <a href="http://www.github.com" class="nav-link"><i class="fa-brands fa-github"></i></a>
+                        <a href="http://www.github.com" class="nav-link" aria-label="link to github"><i class="fa-brands fa-github"></i></a>
 
-                        <a href="http://www.x.com" class="nav-link"><i class="fa-solid fa-x"></i></a>
+                        <a href="http://www.x.com" class="nav-link" aria-label="link to twitter now x"><i class="fa-solid fa-x"></i></a>
                     </div>
 
                 </div>
@@ -143,16 +143,22 @@
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-12 mb-3">
+                                <label for="from_name">
                                 <input type="text" id="contact-name" name="from_name" class="form-control"
                                     placeholder="Your Name" required>
+                                </label>
                             </div>
                             <div class="col-12 mb-3">
+                                <label for="contact_email">
                                 <input type="email" id="contact-email" name="contact_email" class="form-control"
                                     placeholder="Your Email" required>
+                                </label>
                             </div>
                             <div class="col-12 mb-3">
+                                <label for="message">
                                 <textarea class="form-control" id="contact-message" name="message"
                                     placeholder="Your Message" rows="3" required></textarea>
+                                </label>
                             </div>
                         </div>
                         <button type="submit" class="btn BTN-BLUE btn-sm">Send Message</button>

@@ -1,6 +1,6 @@
 # Woodhouse Bookings ***private eatery***
 
-**👉 [Link to Live Project]([https://woodhouse-6b4519e75518.herokuapp.com](https://woodhouse-6b4519e75518.herokuapp.com)**
+**👉 [Link to Live Project]([https://woodhouse-6b4519e75518.herokuapp.com]**
 
 
 ![screenshot](/readmecontent/images/topof.png)
@@ -256,6 +256,7 @@ For security reasons i concealed the `SECRET_KEY`, which have been changed durin
 
 **Discovering `.env` and Implementation:** I discovered the utility of using `.env` with `decouple` for streamlined management in `settings.py`. This approach allowed for shorter, more manageable lines in the configuration file.
 
+-  `python-decouple==3.8`: Separates settings parameters from code, making configuration more secure and scalable.
 
 ![screenshot](/readmecontent/images/settingspy.png)
 
@@ -275,16 +276,11 @@ urlpatterns = [
     path('bookings/', include('bookings.urls', namespace='bookings')), 
     path('menu/', include('menu.urls', namespace='menu')), 
 ]
- 
-
-
 
   
 [Back to top](#)
 
 ---
-
-
 
 **A few screenshots:**
 
@@ -312,6 +308,14 @@ urlpatterns = [
 - Html Validation
 
 - Css Validation
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+    <img src="/readmecontent/images/validcss.png" alt="Image 7" width="100"/>
+</p>
 
 
 ***Coverage***
@@ -343,9 +347,13 @@ create and account and then you can create your own database, to use in your pro
 
 ## Hosting Static Assets: Cloudinary
 
+- https://cloudinary.com  
+
 - Cloudinary hosts static assets like stylesheets, JavaScript files, images, and videos, optimizing media file management and performance.
 
-- https://cloudinary.com  
+- When you feel ready to deploy your project commands to run to upload the staticfiles and images, ( make sure you use webp images, for better preformance.)
+
+- `python manage.py collectstatic` you will be prompted with a yes/no option. 
 
 ---
  
@@ -353,32 +361,35 @@ create and account and then you can create your own database, to use in your pro
 ## Deployment
  
 
-- setting up the settings.py before.
+- setting up the settings.py before pushing it to Heroku don't forget Debbug = `False` 
 
-- then pushing it to the main.
-
+- then pushing it to the main on github, after follow the steps below.
 
 
 - https://www.heroku.com
 
   - Heroku provides a platform for easy deployment and scaling of the application.
 
+  - Create your app and select your region. 
+
+
 -  **Steps for Deployment:**
 
 
 ***Connect the Heroku app to the GitHub repository***
 
-Configure environment variables in Heroku, including `DISABLE_COLLECTSTATIC=1`.
+   - Don't forget to add your config vars to Heroku, 
+   ![screenshot](/readmecontent/images/configvars.png)
+   
+   - Heroku, including `DISABLE_COLLECTSTATIC=1`. 
 
-Deploy the application from the main branch
+   - 
 
-Use the Heroku CLI to manage and scale the application.
+   - Use the Heroku CLI to push it from your ide, or simply go to the website and connect your repositorie, and deploy directly from the site.
 
   
 [Back to top](#)
 ---
-
-  
 
 ## Credits & Tutorials
 

@@ -15,7 +15,8 @@
         <form method="post" action="{% url 'accounts:signup' %}">
             {% csrf_token %}
             {% bootstrap_form form %}
-
+            {% bootstrap_form_errors form type='all' %}
+            
 
             <div class="d-grid gap-2">
                 <button type="submit" class="btn BTN-GREEN btn-sm">Sign up</button>

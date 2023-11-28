@@ -26,13 +26,15 @@ SECRET_KEY = config('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
 
+DEBUG = True
 
-ALLOWED_HOSTS = ['woodhouse-6b4519e75518.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://woodhouse-6b4519e75518.herokuapp.com']
+#ALLOWED_HOSTS = ['woodhouse-6b4519e75518.herokuapp.com']
+
+#CSRF_TRUSTED_ORIGINS = ['https://woodhouse-6b4519e75518.herokuapp.com']
 
 # Application definition
 

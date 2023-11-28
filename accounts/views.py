@@ -17,9 +17,8 @@ def signup_view(request):
             return redirect('bookings:booking_dashboard')
             
     else:
-        form = UserCreationForm()
-        context = {'form': form, 'hide_map': True}
-    return render(request, 'registration/signup.html',context)
+        form = UserCreationForm()        
+    return render(request, 'registration/signup.html', {'form': form})
 
  
 
@@ -37,9 +36,8 @@ def login_view(request):
         else:
             messages.error(request, 'Wrong username or password.')
     else:
-        form = AuthenticationForm()
-        context = {'form': form, 'hide_map': True}
-    return render(request, 'registration/login.html',context)
+        form = AuthenticationForm()        
+    return render(request, 'registration/login.html', {'form': form})
 
 
 
@@ -47,7 +45,7 @@ def login_view(request):
 def Logout_View(request):    
     # Standard django Logout / with a different redirect
     logout(request)
-    return render(request, 'registration/logout.html',{'hide_map': True})
+    return render(request, 'registration/logout.html')
 
 
 

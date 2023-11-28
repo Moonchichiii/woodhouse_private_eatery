@@ -30,8 +30,6 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = False
 
-
-
 ALLOWED_HOSTS = ['woodhouse-6b4519e75518.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://woodhouse-6b4519e75518.herokuapp.com']

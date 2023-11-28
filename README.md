@@ -172,19 +172,20 @@ As a staff member, I log in with predefined credentials and am redirected to the
 
 ## Design and Planning Stages
 
-![Balsamiq](/readmecontent/images/1.png)
+<p>
+ <img src="/readmecontent/images/1.png" alt="Image 10" width="200"/>
+ <img src="/readmecontent/images/2.png" alt="Image 11" width="200"/>
+ <img src="/readmecontent/images/3.png" alt="Image 12" width="200"/>
+ </p>
 
-![Balsamiq](/readmecontent/images/2.png)
-
-![Balsamiq](/readmecontent/images/3.png)   
 
 After that used Justinmind to draw up the layout, and then a prebuild using codepen.io
 
-![](/readmecontent/images/layoutplan.png)   
+<p>
+<img src="/readmecontent/images/layoutplan.png" alt="Image 13" width="200"/>
+<img src="/readmecontent/images/Prebuild%20of%20the%20layout.%20.png" alt="Image 14" width="200"/>
+</p>
 
-![](/readmecontent/images/Prebuild%20of%20the%20layout.%20.png)   
-
-  
   
 [Back to top](#)
 ---
@@ -258,7 +259,7 @@ For security reasons i concealed the `SECRET_KEY`, which have been changed durin
 
 -  `python-decouple==3.8`: Separates settings parameters from code, making configuration more secure and scalable.
 
-![screenshot](/readmecontent/images/settingspy.png)
+ <img src="/readmecontent/images/settingspy.png" alt="Image 10" width="200"/>
 
 
 I employed namespacing to maintain a clean project structure, free from cluttered files, this approach will keep the file organization clean. 
@@ -315,7 +316,7 @@ urlpatterns = [
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
         alt="Valid CSS!" />
     </a>
-    <img src="/readmecontent/images/validcss.png" alt="Image 7" width="200"/>
+    <img src="/readmecontent/images/validcss.png" alt="Image 7" width="250"/>
 </p>
 
 
@@ -340,8 +341,7 @@ Commands:
 
 create and account and then you can create your own database, to use in your project,   
 
-![dbplanning](/readmecontent/images/dbschema.png)
-
+<img src="/readmecontent/images/dbschema.png" alt="Image 14" width="250"/>
 ---
 
 
@@ -380,7 +380,7 @@ create and account and then you can create your own database, to use in your pro
 
    ***Don't forget to add your config vars to Heroku***
 
-   <img src="/readmecontent/images/configvars.png" alt="Image 7" width="200"/>
+   <img src="/readmecontent/images/configvars.png" alt="Image 15" width="200"/>
    
    
    - Heroku, including `DISABLE_COLLECTSTATIC=1`. when your using Cloudinary

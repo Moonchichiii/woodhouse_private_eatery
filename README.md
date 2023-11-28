@@ -145,20 +145,6 @@ As a staff member, I log in with predefined credentials and am redirected to the
  
 
 ---
-**A few screenshots:**
-
-<p align="center">
-  <img src="/readmecontent/images/user/start.png" alt="Image 1" width="150"/>
-  <img src="/readmecontent/images/user/signup.png" alt="Image 2" width="150"/>
-  <img src="/readmecontent/images/user/booking%20dashboard.png" alt="Image 3" width="150"/>
-
-  <img src="/readmecontent/images/user/booking.png" alt="Image 4" width="150"/>
-  <img src="/readmecontent/images/user/confirmation.png" alt="Image 5" width="150"/>
-  <img src="/readmecontent/images/user/listed%20booking.png" alt="Image 6" width="150"/>
-  <img src="/readmecontent/images/user/cancel.png" alt="Image 7" width="150"/>
-</p>
-
-  
 
 ## Technologies Used
 
@@ -177,9 +163,7 @@ As a staff member, I log in with predefined credentials and am redirected to the
 
 **Frameworks:**
 
-- Bootstrap
-
-  
+- Bootstrap  - Using Bootstrap CDN to make the site responsive and provide out-of-the-box layouts.  
 
 ---
 
@@ -204,8 +188,6 @@ After that used Justinmind to draw up the layout, and then a prebuild using code
   
 [Back to top](#)
 ---
-
-  
 
 ## Dependencies
 
@@ -269,25 +251,22 @@ App ***Bookings:*** Handles the booking side of the project.
 
 App ***Menu:*** For managers of the site to easily change the menu and prices on the site.  
 
-For the forms, I will use Bootstrap's form tags where I can, for ease of use. Also, going with Bootstrap CDN to make the site responsive and provide out-of-the-box layouts.
+
+For security reasons i concealed the `SECRET_KEY`, which have been changed during the development, and also all other `API_KEYS` and updated it since the project's inception. I also revised my `settings.py` to prepare it for future deployment on Heroku.  
+
+**Discovering `.env` and Implementation:** I discovered the utility of using `.env` with `decouple` for streamlined management in `settings.py`. This approach allowed for shorter, more manageable lines in the configuration file.
 
 
-
+![screenshot](/readmecontent/images/settingspy.png)
 
 
 I employed namespacing to maintain a clean project structure, free from cluttered files, this approach will keep the file organization clean. 
 
 `from django.urls import include, path
 
-urlpatterns = [
+`from django.urls import include, path` 
 
-path("author-polls/", include("polls.urls", namespace="author-polls")),
-
-path("bookings/", include("polls.urls", namespace="bookings")),
-
-]`
-
-- This project urls layout 
+- This project urls layout in the backend's urls.py 
 
 urlpatterns = [
 
@@ -299,19 +278,29 @@ urlpatterns = [
  
 
 
-For security reasons i concealed the `SECRET_KEY`, which have been changed during the development, and also all other `API_KEYS` and updated it since the project's inception. I also revised my `settings.py` to prepare it for future deployment on Heroku.  
-
-**Discovering `.env` and Implementation:** I discovered the utility of using `.env` with `decouple` for streamlined management in `settings.py`. This approach allowed for shorter, more manageable lines in the configuration file.
 
   
 [Back to top](#)
 
 ---
+
+
+
+**A few screenshots:**
+
+<p align="center">
+  <img src="/readmecontent/images/user/start.png" alt="Image 1" width="150"/>
+  <img src="/readmecontent/images/user/signup.png" alt="Image 2" width="150"/>
+  <img src="/readmecontent/images/user/booking%20dashboard.png" alt="Image 3" width="150"/>
+
+  <img src="/readmecontent/images/user/booking.png" alt="Image 4" width="150"/>
+  <img src="/readmecontent/images/user/confirmation.png" alt="Image 5" width="150"/>
+  <img src="/readmecontent/images/user/listed%20booking.png" alt="Image 6" width="150"/>
+  <img src="/readmecontent/images/user/cancel.png" alt="Image 7" width="150"/>
+</p>
   
 
 ## Development Environment: Gitpod
-
-  
 
 - Gitpod ide for the so don't have install everything on my computer and i jump in and edit from anywhere.   
 

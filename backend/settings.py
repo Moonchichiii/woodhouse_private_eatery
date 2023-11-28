@@ -25,9 +25,8 @@ CLOUDINARY_STORAGE = {
 SECRET_KEY = config('SECRET_KEY')
 
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['woodhouse-6b4519e75518.herokuapp.com']
 
@@ -141,6 +140,10 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'frontend' / 'static',
+]
 
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 

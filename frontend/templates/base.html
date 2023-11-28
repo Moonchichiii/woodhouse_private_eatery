@@ -139,26 +139,27 @@
                 <div class="col-12 col-md-4 d-flex flex-column justify-content-center text-center mb-3">
                     <h5>Contact Us</h5>
                     <p>Get in touch with our team</p>
-                    <form id="contact-form" method="post">
+                    <label for="contact-form"></label>
+                     <form id="contact-form" method="post">                    
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-12 mb-3">
-                                <label for="from_name">
+                                <label for="contact-name"></label>
                                 <input type="text" id="contact-name" name="from_name" class="form-control"
                                     placeholder="Your Name" required>
-                                </label>
+                                
                             </div>
                             <div class="col-12 mb-3">
-                                <label for="contact_email">
+                                <label for="contact-email"></label>
                                 <input type="email" id="contact-email" name="contact_email" class="form-control"
                                     placeholder="Your Email" required>
-                                </label>
+                                
                             </div>
                             <div class="col-12 mb-3">
-                                <label for="message">
+                                <label for="contact-message"></label>
                                 <textarea class="form-control" id="contact-message" name="message"
                                     placeholder="Your Message" rows="3" required></textarea>
-                                </label>
+                                
                             </div>
                         </div>
                         <button type="submit" class="btn BTN-BLUE btn-sm">Send Message</button>

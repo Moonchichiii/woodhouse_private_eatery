@@ -307,6 +307,7 @@ urlpatterns = [
 
 - Html Validation
 
+
 - Css Validation
 <p>
 <a href="http://jigsaw.w3.org/css-validator/check/referer">
@@ -314,7 +315,7 @@ urlpatterns = [
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
         alt="Valid CSS!" />
     </a>
-    <img src="/readmecontent/images/validcss.png" alt="Image 7" width="100"/>
+    <img src="/readmecontent/images/validcss.png" alt="Image 7" width="200"/>
 </p>
 
 
@@ -361,7 +362,7 @@ create and account and then you can create your own database, to use in your pro
 ## Deployment
  
 
-- setting up the settings.py before pushing it to Heroku don't forget Debbug = `False` 
+- Setting up the settings.py before pushing it to Heroku don't forget Debbug = `False` 
 
 - then pushing it to the main on github, after follow the steps below.
 
@@ -378,14 +379,19 @@ create and account and then you can create your own database, to use in your pro
 
 ***Connect the Heroku app to the GitHub repository***
 
-   - Don't forget to add your config vars to Heroku, 
-   ![screenshot](/readmecontent/images/configvars.png)
-   
-   - Heroku, including `DISABLE_COLLECTSTATIC=1`. 
+   ***Don't forget to add your config vars to Heroku***
 
-   - 
+   <img src="/readmecontent/images/configvars.png" alt="Image 7" width="200"/>
+   
+   
+   - Heroku, including `DISABLE_COLLECTSTATIC=1`. when your using Cloudinary
 
    - Use the Heroku CLI to push it from your ide, or simply go to the website and connect your repositorie, and deploy directly from the site.
+
+   - If your on the site and have set your Config Vars, then go to the "Deploy tab" and scroll down to "DEPLOY BRANCH"
+   
+   - View the build log for errors if any comes up. 
+   
 
   
 [Back to top](#)

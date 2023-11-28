@@ -22,7 +22,7 @@
                 <a class="navbar-brand" href="{% url 'frontend:index' %}">
                     <img srcset="https://res.cloudinary.com/dgve5ifit/image/upload/v1700635712/static/navlogo_k71vyy.png"
                         alt="" style="width:70px; height:70px;">
-                    <h2>WoodHouse Bookings</h2>
+                    <h1 class="header-heading">WoodHouse Bookings</h1>
                 </a>
                 <button class="navbar-toggler bg-transparent" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -117,11 +117,11 @@
                     </address>
                     <p>&copy; 2023 Woodhouse Bookings Ltd. All rights reserved.</p>
                     <p>
-                        <a type="button" class="link-terms-policy" data-bs-toggle="modal" data-bs-target="#termsModal">
+                        <a href="#" class="link-terms-policy" data-bs-toggle="modal" data-bs-target="#termsModal">
                             Terms of Service
                         </a>
                         |
-                        <a type="button" class="link-terms-policy" data-bs-toggle="modal"
+                        <a href="#" class="link-terms-policy" data-bs-toggle="modal"
                             data-bs-target="#privacyModal">
                             Privacy Policy
                         </a>
@@ -177,10 +177,7 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_API_KEY }}&callback=initMap"></script>
     <script src="{% static 'js/script.js' %}"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>    
 
     {% include "terms.html" %}
     {% include "privacy.html" %}

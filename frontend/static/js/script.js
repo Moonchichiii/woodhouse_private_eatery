@@ -1,21 +1,15 @@
-let map; 
+let map;
 
 async function initMap() {
-  
-  const { Map, LatLng } = await google.maps.importLibrary("maps");
-
-
-  const center = new LatLng(56.629253, 15.372672);
-
-
-  map = new Map(document.getElementById("map"), {
-    center: center, 
-    zoom: 12, 
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: new google.maps.LatLng(56.629253, 15.372672),
+    zoom: 12,
   });
 }
 
-
 window.initMap = initMap;
+
+
  
 
 document.addEventListener("DOMContentLoaded", function() {    

@@ -10,6 +10,7 @@ app_name = 'frontend'
 urlpatterns = [
 
  path('', views.index, name='index'),
+ path('', views.index, name='base'),
  path('terms/', views.terms, name='terms'),
  path('privacy/', views.privacy, name='privacy'),
 

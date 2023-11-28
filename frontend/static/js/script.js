@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
     let map;
 async function initMap() {
 
@@ -10,9 +9,9 @@ async function initMap() {
 
      });
     }    
- });
 
  initMap();
+ 
 
 document.addEventListener("DOMContentLoaded", function() {    
     emailjs.init("hvENepDl1NjzqvuzK");

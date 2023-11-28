@@ -11,23 +11,25 @@
     <tbody>
         <tr>
             <th scope="row">Name:</th>
-             <td>{{ booking.first_name|default:"Not specified" }}
+             <td class="text-end">{{ booking.first_name|default:"Not specified" }}
                  {{ booking.last_name|default:"" }}
              </td>
         </tr>
          <tr>
             <th scope="row">Number of Guests:</th>
-            <td>{{ booking.number_of_guests|default:"Not specified" }}</td>
+            <td class="text-end">{{ booking.number_of_guests|default:"Not specified" }}</td>
          </tr>
          <tr>
             <th scope="row">Date</th>
-            <td>{{ booking.date|date:"Y-m-d" }}</td>
+            <td class="text-end">{{ booking.date|date:"Y-m-d" }}</td>
+        </tr>
+            <tr>
             <th scope="row">Time:</th>
-            <td>{{ booking.get_time_slot_display }}</td>
+            <td class="text-end">{{ booking.get_time_slot_display }}</td>
         </tr>
         <tr>
             <th scope="row">Contact Email:</th>
-            <td>{{ booking.email|default:"Not specified" }}</td>
+            <td class="text-end">{{ booking.email|default:"Not specified" }}</td>
          </tr>
         </tbody>
     </table>

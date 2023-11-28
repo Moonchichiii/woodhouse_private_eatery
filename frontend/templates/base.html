@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
     {% load static %}
+<head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fine dining,eating in the canopy,good food,restaurant,forest,lake">
@@ -75,18 +75,24 @@
         </div>
     </nav>
     {% else %}
-    <nav class="navbar navbar-light bg-light button-header">
-        
-        <div class="container-fluid">
+    {% if not on_dashboard_page %}
 
-            <span class="d-flex justify-content-center">
+            <nav class="navbar navbar-light bg-light button-header">
 
-                <a href="{% url 'bookings:booking_dashboard' %}" class="btn btn-success btn-lg">Return to Dashboard</a>
+                <div class="container-fluid">
 
-            </span>
-        </div>
-    </nav>
-    {% endif %}    
+                    <span class="d-flex justify-content-center">
+
+                        <a href="{% url 'bookings:booking_dashboard' %}" class="btn btn-success btn-lg">Return to Dashboard</a>
+
+                    </span>
+
+                </div>
+
+            </nav>
+            {% endif %}
+        {% endif %}
+
     {% endblock %}
 
     <main class="py-4">
@@ -102,11 +108,9 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-12 col-md-4 d-flex flex-column justify-content-center text-center mb-3"
-                    id="address-section">
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-center text-center mb-3" id="address-section">
                     <h5>Woodhouse Bookings</h5>
-                    <address>
-                        Woodhouse Bookings<br>
+                    <address>                        
                         4500 Pine Tree Lane,<br>
                         Woodland, WH<br>
                         P: (+46) 00 10 20 30<br>

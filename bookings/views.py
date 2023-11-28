@@ -9,10 +9,14 @@ from .models import Bookings
 
 
 @login_required
-def booking_dashboard_view(request):
+def booking_dashboard_view(request):    
     # Access only for logged in users
     user_bookings = Bookings.objects.filter(user=request.user)
-    return render(request, 'bookings/booking_dashboard.html', {'bookings': user_bookings})
+    context = {
+        'on_dashboard_page': True,
+        'bookings': user_bookings,
+    }
+    return render(request, 'bookings/booking_dashboard.html', context)
 
 
     

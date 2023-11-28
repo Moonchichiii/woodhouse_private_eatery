@@ -4,19 +4,43 @@
 {% block content %}
 
 
-<div class="card col-12 col-sm-12 col-md-8 col-lg-3">
+<div class="card col-12 col-sm-12 col-md-8 col-lg-3"><br>
     <h4 class="card-title">Book a table!</h4>
     <div class="card-body">
         <form method="post" action="{% url 'bookings:make_booking' %}" class="row g-2">
             {% csrf_token %}
-            {% bootstrap_form form %}
 
-            <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-success btn-sm">Book Table</button>
-                <a href="{% url 'bookings:booking_dashboard' %}" class="btn btn-secondary btn-sm">Return to
-                    Dashboard</a>
+            {% for field in form %}
+                <div class="mb-3">
+                    
+                    <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                    
+                    {{ field }}
+
+                    {% if field.help_text %}
+
+                        <div class="form-text">{{ field.help_text }}</div>
+                    
+                        {% endif %}
+
+                    {% for error in field.errors %}
+
+                        <div class="invalid-feedback">
+
+                            {{ error }}
+
+                        </div>
+                    {% endfor %}
                 </div>
-            </form>
+            {% endfor %}
+
+            {% bootstrap_form_errors form type='all' %}
+        
+            <div class="d-grid gap-1">
+                <button type="submit" class="btn btn-success btn-sm">Book Table</button>
+                <a href="{% url 'bookings:booking_dashboard' %}" class="btn btn-secondary btn-sm">Return to Dashboard</a>
+            </div>
+        </form>
         </div>
         <div>
         </div>

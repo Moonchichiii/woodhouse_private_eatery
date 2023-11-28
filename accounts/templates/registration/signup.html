@@ -6,7 +6,7 @@
 
 <div class="card" style="width: 18rem;">    
     <div class="card-body">
-      <h5 class="card-title">Login to Book!</h5>      
+      <h5 class="card-title">Sign Up to Book!</h5>      
     </div>
     <div class="card-body">
     
@@ -14,9 +14,10 @@
 
         <form method="post" action="{% url 'accounts:signup' %}">
             {% csrf_token %}
-            {% bootstrap_form form %}
-            {% bootstrap_form_errors form type='all' %}
             
+            {% bootstrap_form form %}
+            
+            {% bootstrap_form_errors form type='all' %}
 
             <div class="d-grid gap-2">
                 <button type="submit" class="btn BTN-GREEN btn-sm">Sign up</button>

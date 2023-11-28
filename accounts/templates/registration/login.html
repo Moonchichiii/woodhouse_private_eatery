@@ -10,23 +10,47 @@
       <h5 class="card-title">Login to Book!</h5>      
     </div>
     <div class="card-body">
-        <form method="post" action="{% url 'accounts:login' %}">
-                
+        <form method="post" action="{% url 'accounts:login' %}" class="form">
             {% csrf_token %}
             {% bootstrap_form form %}
-            
+
+
+                <div class="mb-3">
+
+
+                    <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+
+
+                    {{ field }}
+                  
+                    {% if field.help_text %}
+                  
+                    <div class="form-text">{{ field.help_text }}</div>
+                  
+                  
+                    {% endif %}
+                  
+                  
+                    {% for error in field.errors %}
+                        <div class="invalid-feedback">
+                  
+                            {{ error }}
+                        </div>
+
+                    
+                </div>
+            {% endfor %}
+
             {% bootstrap_form_errors form type='all' %}
-            {% bootstrap_form form layout='horizontal' %}
 
             <div class="d-grid gap-2">                
-                <button type="submit" class="btn  BTN-GREEN btn-sm">Login</button>
+                <button type="submit" class="btn btn-success">Login</button>
+            </div>
 
-                {% if request.GET.next %}
-
+            {% if request.GET.next %}
                 <input type="hidden" name="next" value="{{ request.GET.next }}">
-
-                {% endif %}
-            </form>   
+            {% endif %}
+        </form>   
     </div>
   </div>
   

@@ -11,21 +11,43 @@
             
             <h5 class="card-title">Edit your booking {{ request.user.username }}</h5>
             <form method="post" action="{% url 'bookings:edit_booking' booking_id=booking.id %}" class="form">
-
                 {% csrf_token %}
-                {% bootstrap_form form %}
+            
+                {% for field in form %}
+                    <div class="mb-3">
 
+                        <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                        {{ field }}
+
+                        {% if field.help_text %}
+
+                            <div class="form-text">{{ field.help_text }}</div>
+
+                        {% endif %}
+
+                        {% for error in field.errors %}
+
+                            <div class="invalid-feedback">
+                                
+                                {{ error }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            
+                {% bootstrap_form_errors form type='all' %}
+            
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-success">Save Booking</button>
-
                     <a href="{% url 'bookings:booking_dashboard' %}" class="btn btn-secondary btn-sm">Return to Dashboard</a>
-
                 </div>
-
-
             </form>
         </div>
     </div>
 </div>
+
+
+
+
 
 {% endblock %}

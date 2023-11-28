@@ -308,6 +308,8 @@ urlpatterns = [
 
 - Html Validation
 
+    <img src="/readmecontent/images/Html Validator.png" alt="Image 16" width="250"/>
+
 
 - Css Validation
 <p>
@@ -319,6 +321,10 @@ urlpatterns = [
     <img src="/readmecontent/images/validcss.png" alt="Image 7" width="250"/>
 </p>
 
+
+- Accessscan 
+
+    <img src="/readmecontent/images/accessscan" alt="Image 17" width="250"/>
 
 ***Coverage***
 

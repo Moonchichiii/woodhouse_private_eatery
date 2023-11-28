@@ -36,7 +36,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-bs-toggle="modal"
-                                data-bs-target="#galleryModal" aria-label="Gallery">Gallery</a>
+                                data-bs-target="#galleryModal" aria-label="Gallery" role="button">Gallery</a>
                         </li>
                         <li class="nav-item">
                             <a href="{% url 'menu:recipe' %}" class="nav-link" aria-label="recipe link">Recipes</a>
@@ -116,12 +116,12 @@
                     </address>
                     <p>&copy; 2023 Woodhouse Bookings Ltd. All rights reserved.</p>
                     <p>
-                        <a href="#" class="link-terms-policy" data-bs-toggle="modal" data-bs-target="#termsModal">
+                        <a href="#" class="link-terms-policy" data-bs-toggle="modal" data-bs-target="#termsModal" role="button">
                             Terms of Service
                         </a>
                         |
                         <a href="#" class="link-terms-policy" data-bs-toggle="modal"
-                            data-bs-target="#privacyModal">
+                            data-bs-target="#privacyModal" role="button">
                             Privacy Policy
                         </a>
                     </p>
@@ -144,19 +144,19 @@
                             <div class="col-12 mb-3">
                                 <label for="contact-name"></label>
                                 <input type="text" id="contact-name" name="from_name" class="form-control"
-                                    placeholder="Your Name" required>
+                                    placeholder="Your Name" required aria-label="Your full name"> 
                                 
                             </div>
                             <div class="col-12 mb-3">
                                 <label for="contact-email"></label>
                                 <input type="email" id="contact-email" name="contact_email" class="form-control"
-                                    placeholder="Your Email" required>
+                                    placeholder="Your Email" required aria-label="Your email adress">
                                 
                             </div>
                             <div class="col-12 mb-3">
                                 <label for="contact-message"></label>
                                 <textarea class="form-control" id="contact-message" name="message"
-                                    placeholder="Your Message" rows="3" required></textarea>
+                                    placeholder="Your Message" rows="3" required aria-label="Your message"></textarea>
                                 
                             </div>
                         </div>

@@ -55,7 +55,7 @@ body::before {
 
 body {
     background-attachment: fixed;
-    background-image: url('https://res.cloudinary.com/dgve5ifit/image/upload/v1700493127/static/images/bkg.6129f13bcef3.jpg');
+    background-image: url('https://res.cloudinary.com/dgve5ifit/image/upload/v1701175773/static/images/pexels-rudolf-jakkel-418831-_1__jpf0xo.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -287,11 +287,12 @@ footer {
 }
 
 .upcoming-events img {
-    width: 100%; 
-    height: auto; 
+    max-width: 350px;
+    height: auto;
+    width:100%;
     padding: 0 0.5px;
     border-radius: 15px;
-    max-width: 350px;   
+    
 }
 
 .about-us {        

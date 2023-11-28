@@ -338,6 +338,8 @@ Commands:
 
 create and account and then you can create your own database, to use in your project,   
 
+![dbplanning](/readmecontent/images/dbschema.png)
+
 ---
 
   

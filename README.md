@@ -182,8 +182,8 @@ As a staff member, I log in with predefined credentials and am redirected to the
 After that used Justinmind to draw up the layout, and then a prebuild using codepen.io
 
 <p>
-<img src="/readmecontent/images/layoutplan.png" alt="Image 13" width="200"/>
-<img src="/readmecontent/images/Prebuild%20of%20the%20layout.%20.png" alt="Image 14" width="200"/>
+<img src="/readmecontent/images/layoutplan.png" alt="Image 13" width="250"/>
+<img src="/readmecontent/images/Prebuild%20of%20the%20layout.%20.png" alt="Image 14" width="250"/>
 </p>
 
   
@@ -324,7 +324,9 @@ urlpatterns = [
 
 - Accessscan 
 
-    <img src="/readmecontent/images/accessscan" alt="Image 17" width="250"/>
+    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="250"/>
+
+    ***Misstakes that came up have been fixed***
 
 ***Coverage***
 

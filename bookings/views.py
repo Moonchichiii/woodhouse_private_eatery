@@ -21,7 +21,7 @@ def make_booking_view(request):
     if request.method == 'POST':
         form = BookingsForm(request.POST)
         if form.is_valid():
-            booking = form.save(commit=False)
+            booking = form.save(commit=False)            
             booking.user = request.user
             booking.save()
             return redirect('bookings:booking_confirmation', booking_id=booking.id)            

@@ -19,11 +19,12 @@
             <th scope="row">Number of Guests:</th>
             <td>{{ booking.number_of_guests|default:"Not specified" }}</td>
          </tr>
-        <tr>
-            <th scope="row">Date & Time:</th>
+         <tr>
+            <th scope="row">Date</th>
             <td>{{ booking.date|date:"Y-m-d" }}</td>
-            <td>{{ booking.time|date:"H:i" }}</td>
-         </tr>
+            <th scope="row">Time:</th>
+            <td>{{ booking.get_time_slot_display }}</td>
+        </tr>
         <tr>
             <th scope="row">Contact Email:</th>
             <td>{{ booking.email|default:"Not specified" }}</td>

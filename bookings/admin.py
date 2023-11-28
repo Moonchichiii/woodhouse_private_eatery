@@ -8,7 +8,7 @@ class BookingManager(admin.ModelAdmin):
         'first_name',
         'last_name', 
         'date', 
-        'time',
+        'time_slot',
         'number_of_guests',
         'phone_number',
         'email','allergy'
@@ -23,6 +23,6 @@ class BookingManager(admin.ModelAdmin):
     
     list_filter = (
         'date',
-        'time',
+        'time_slot',
         'number_of_guests'
         )   

@@ -29,9 +29,9 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['8000-moonchichiii-woodhouse-p-6y658zhf9s.us2.codeanyapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-moonchichiii-woodhouse-p-21gcbyfg33.us2.codeanyapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://8000-moonchichiii-woodhouse-p-6y658zhf9s.us2.codeanyapp.com']
 
 # Application definition
 
@@ -134,7 +134,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+#TIME_ZONE = "Europe/London"
+
+TIME_ZONE = "Europe/Berlin"
 
 USE_I18N = True
 

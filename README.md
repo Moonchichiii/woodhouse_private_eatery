@@ -176,19 +176,20 @@ As a staff member, I log in with predefined credentials and am redirected to the
 
 ## Design and Planning Stages
 
-   
+![Balsamiq](/readmecontent/images/1.png)
 
-First rough schets made with balsamiq
+![Balsamiq](/readmecontent/images/2.png)
 
-  
-
-(img from balsamiq)
-
-(img from balsamiq)
-
-  
+![Balsamiq](/readmecontent/images/3.png)   
 
 After that used Justinmind to draw up the layout, and then a prebuild using codepen.io
+
+![](/readmecontent/images/layoutplan.png)   
+
+![](/readmecontent/images/)   
+
+![](/readmecontent/images/)   
+
 
   
 

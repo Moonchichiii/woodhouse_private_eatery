@@ -30,11 +30,8 @@ DEBUG = False
 
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['woodhouse-6b4519e75518.herokuapp.com']
 CSRF_TRUSTED_ORIGINS = ['https://woodhouse-6b4519e75518.herokuapp.com']
-
-#ALLOWED_HOSTS = ['woodhouse-6b4519e75518.herokuapp.com']
-#CSRF_TRUSTED_ORIGINS = ['https://woodhouse-6b4519e75518.herokuapp.com']
 
 # Application definition
 

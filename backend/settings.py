@@ -29,9 +29,9 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-moonchichiii-woodhouse-p-6y658zhf9s.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['woodhouse-6b4519e75518.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-moonchichiii-woodhouse-p-6y658zhf9s.us2.codeanyapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://woodhouse-6b4519e75518.herokuapp.com']
 
 # Application definition
 
@@ -100,14 +100,8 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 
-#DATABASES = {'default': dj_database_url.config(default=config('DATABASE_URL'))}
+DATABASES = {'default': dj_database_url.config(default=config('DATABASE_URL'))}
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
 
 
 # Password validation
@@ -134,9 +128,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-#TIME_ZONE = "Europe/London"
-
-TIME_ZONE = "Europe/Berlin"
+TIME_ZONE = "Europe/London"
 
 USE_I18N = True
 

@@ -314,9 +314,16 @@ For security reasons i concealed the `SECRET_KEY`, which have been changed durin
 
 - Responsive
 
-- Coverage
+***Coverage***
 
- [Coverage report](/htmlcov/index.html/)
+ - [Coverage report](/readmecontent/images/coverage.png)
+
+Commands: 
+
+1. coverage run --source='.' manage.py test
+2. coverage report
+3. coverage html
+
 
   
 [Back to top](#)

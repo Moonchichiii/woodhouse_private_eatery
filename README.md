@@ -167,8 +167,8 @@ instead of the signup/login button, allowing me to easily navigate back to the b
 After that, I used Justinmind to draw up the layout, and then a prebuild using codepen.io
 
 <p>
-<img src="/readmecontent/images/layoutplan.png" alt="Image 13" width="300"/>
-<img src="/readmecontent/images/Prebuild%20of%20the%20layout.%20.png" alt="Image 14" width="300"/>
+<img src="/readmecontent/images/layoutplan.png" alt="Image 13" width="350"/>
+<img src="/readmecontent/images/prebuild.png" alt="Image 20" width="250"/>
 </p>
 
   
@@ -313,15 +313,15 @@ Commands:
 
 - Lighthouse 
 
-    <img src="/readmecontent/images/lighthouse.png" alt="Image 17" width="300"/>
+    <img src="/readmecontent/images/lighthouse.png" alt="Image 17" width="400"/>
 
 - Webpagetest 
 
-    <img src="/readmecontent/images/webpagetest.png" alt="Image 17" width="300"/>
+    <img src="/readmecontent/images/webpagetest.png" alt="Image 17" width="400"/>
 
 - Accessscan 
 
-    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="300"/>
+    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="400"/>
 
 
   
@@ -334,7 +334,7 @@ Commands:
 
 Create an account and then you can create your own database to use in your project.   
 
-<img src="/readmecontent/images/dbschema.png" alt="Image 14" width="250"/>
+<img src="/readmecontent/images/dbschema.png" alt="Image 14" width="450"/>
 ---
 
 
@@ -373,7 +373,7 @@ Create an account and then you can create your own database to use in your proje
 
    ***Don't forget to add your config vars to Heroku***
 
-   <img src="/readmecontent/images/configvars.png" alt="Image 15" width="250"/>
+   <img src="/readmecontent/images/configvars.png" alt="Image 15" width="300"/>
    
    
    - Heroku, including `DISABLE_COLLECTSTATIC=1`. when your using Cloudinary

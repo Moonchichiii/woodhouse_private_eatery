@@ -40,8 +40,7 @@ Once registered, they can book, edit, or delete their reservations.
   
 Additionally, I incorporated a functionality for staff to allow them to create reservations for guests, edit or delete them.
 
-handle a menu change on the same page, using the same login as the guests, (superuser's) redirecting to the management page.
-  
+handle a menu change on the same page, using the same login as the guests, (superuser's) redirecting to the management page.  
 
 In terms of layout and design, it is a minimalist website that is simple to navigate around with few options, and it's responsive and easily accessible across various devices.
 
@@ -66,32 +65,36 @@ An instant confirmation is displayed on the screen to reassure customers about t
 ## User Stories
  
 
-As a users i can easily register using a simple sign-up form based on a username and password.
+As a user, I can easily register using a simple sign-up form based on a username and password.
+ 
+ <img src="/readmecontent/images/user/1.png" alt="Image 10" width="150"/>
 
-Once logged in, their booking_id is linked to the user account they created. After registering, they are redirected to the booking dashboard where all
+Once logged in, my booking_id is linked to the user account i created,
 
-their bookings are displayed. From there, they can easily edit or cancel any of their bookings.
+<img src="/readmecontent/images/user/2.png" alt="Image 10" width="150"/>
+ 
 
-  
+after that your directly redirected to the booking dashboard where i can easily make a booking and then  edit or cancel any of my bookings.
 
-Users can still navigate the entire site as a return button appears instead of the signup/login button,
+ <img src="/readmecontent/images/user/3.png" alt="Image 10" width="150"/>
 
-allowing them to easily navigate back to the booking dashboard.
+I can still navigate the entire site as a return button appears instead of the signup/login button, allowing me to easily navigate back to the booking dashboard.
 
-  
+ 
+<img src="/readmecontent/images/user/4.png" alt="Image 10" width="150"/>
 
 - Making a Reservation
 
-  
-
-If a user has an existing booking, it will be displayed as soon as the user logs in to the dashboard. If there are no bookings linked to the account, they can create a new reservation. The dashboard gives the flexibility to edit or cancel any reservation, letting the users adjust their plans as needed.
+If I have an existing booking, it will be displayed as soon as I log in to the dashboard. If there are no bookings linked to my account, I can create a new reservation. The dashboard gives me the flexibility to edit or cancel any reservation, letting me adjust my plans as needed.
 
 
+
+<img src="/readmecontent/images/user/5.png" alt="Image 10" width="150"/>
 
 The logout option is conveniently located on the dashboard and redirects users to the starting point of the website.
-
-  
-  
+ 
+<img src="/readmecontent/images/user/6.png" alt="Image 10" width="150"/>
+<img src="/readmecontent/images/user/7.png" alt="Image 10" width="150"/>
 
 - As Management
 
@@ -178,8 +181,8 @@ Staff members log in with predefined credentials and are redirected to the admin
 After that, I used Justinmind to draw up the layout, and then a prebuild using codepen.io
 
 <p>
-<img src="/readmecontent/images/layoutplan.png" alt="Image 13" width="250"/>
-<img src="/readmecontent/images/Prebuild%20of%20the%20layout.%20.png" alt="Image 14" width="250"/>
+<img src="/readmecontent/images/layoutplan.png" alt="Image 13" width="300"/>
+<img src="/readmecontent/images/Prebuild%20of%20the%20layout.%20.png" alt="Image 14" width="300"/>
 </p>
 
   
@@ -191,7 +194,7 @@ After that, I used Justinmind to draw up the layout, and then a prebuild using c
  
 
 **Dependencies:** Part of my setup involved incorporating a range of dependencies, crucial for the functionality of my project.
-  
+[
 
 -  `asgiref==3.7.2`: Essential for ASGI support, enabling asynchronous capabilities in Django projects.
 
@@ -227,7 +230,7 @@ After that, I used Justinmind to draw up the layout, and then a prebuild using c
 
 -  `requests==2.31.0`: Simplifies making HTTP requests in Python, essential for API interactions.
 
-  
+] 
 
 ---
 [Back to top](#)
@@ -255,7 +258,7 @@ For security reasons I concealed the `SECRET_KEY`, which have been changed durin
 
 -  `python-decouple==3.8`: Separates settings parameters from code, making configuration more secure and scalable.
 
- <img src="/readmecontent/images/settingspy.png" alt="Image 10" width="200"/>
+ <img src="/readmecontent/images/settingspy.png" alt="Image 10" width="250"/>
 
 
 I employed namespacing to maintain a clean project structure, free from cluttered files, this approach will keep the file organization clean. 
@@ -304,17 +307,12 @@ urlpatterns = [
 
 - Html Validation
 
-    <img src="/readmecontent/images/Html Validator.png" alt="Image 16" width="250"/>
+    <img src="/readmecontent/images/Html Validator.png" alt="Image 16" width="350"/>
 
 
 - Css Validation
 <p>
-<a href="http://jigsaw.w3.org/css-validator/check/referer">
-    <img style="border:0;width:88px;height:31px"
-        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-        alt="Valid CSS!" />
-    </a>
-    <img src="/readmecontent/images/validcss.png" alt="Image 7" width="250"/>
+    <img src="/readmecontent/images/validcss.png" alt="Image 7" width="300"/>
 </p>
 
 ***Coverage***
@@ -329,15 +327,15 @@ Commands:
 
 - Lighthouse 
 
-    <img src="/readmecontent/images/lighthouse.png" alt="Image 17" width="250"/>
+    <img src="/readmecontent/images/lighthouse.png" alt="Image 17" width="300"/>
 
 - Webpagetest 
 
-    <img src="/readmecontent/images/webpagetest.png" alt="Image 17" width="250"/>
+    <img src="/readmecontent/images/webpagetest.png" alt="Image 17" width="300"/>
 
 - Accessscan 
 
-    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="250"/>
+    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="300"/>
 
 
   

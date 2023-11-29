@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .forms import BookingsForm
 from .models import Bookings
-
+from django.conf import settings
 
 
 # Create your views here.
@@ -15,6 +15,7 @@ def booking_dashboard_view(request):
     context = {
         'on_dashboard_page': True,
         'bookings': user_bookings,
+        'GOOGLE_API_KEY': settings.GOOGLE_API_KEY,
     }
     return render(request, 'bookings/booking_dashboard.html', context)
 
@@ -31,7 +32,11 @@ def make_booking_view(request):
             return redirect('bookings:booking_confirmation', booking_id=booking.id)            
     else:
         form = BookingsForm()
-    return render(request, 'bookings/make_booking_form.html', {'form': form})
+        context = {
+        'form': form,
+        'GOOGLE_API_KEY': settings.GOOGLE_API_KEY
+    }
+    return render(request, 'bookings/make_booking_form.html', context)
 
 
 
@@ -57,7 +62,14 @@ def edit_booking_view(request, booking_id):
             return redirect('bookings:booking_dashboard')
     else:
         form = BookingsForm(instance=booking)
-    return render(request, 'bookings/edit_booking.html', {'form': form, 'booking': booking})
+        context = {
+        'form': form,
+        'booking': booking,
+        'GOOGLE_API_KEY': settings.GOOGLE_API_KEY
+    }
+    return render(request, 'bookings/edit_booking.html', context)
+        
+    
    
 
 

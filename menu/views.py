@@ -19,21 +19,21 @@ def menu_view(request):
     context = {        
         'starters': starters, 
         'main_courses': main_courses, 
-        'desserts': desserts
+        'desserts': desserts,
+        'GOOGLE_API_KEY': settings.GOOGLE_API_KEY,
         }
 
     return render(request, 'menu.html', context)
 
 
 def recipe_view(request):
-    
+    context = {'GOOGLE_API_KEY': settings.GOOGLE_API_KEY}
     # Renders the recipe page
-    return render(request,'recipes.html')
+    return render(request,'recipes.html', context)
 
 
 def gallery_view(request):
+    context = {'GOOGLE_API_KEY': settings.GOOGLE_API_KEY}
     # Renderes Modal Gallery
     return render(request,'gallery.html')
-
-
 

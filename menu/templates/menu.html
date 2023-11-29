@@ -27,11 +27,9 @@
                         <ul class="menu-text text-center">
                             {% for main_course in main_courses %}
                             <li>
-                                {{ main_courses.name }}
-                            </li>
-                            <td>
-                              €{{ main_courses.price }}
-                            </td>
+                                <li>{{ main_course.name }}</li>
+                                
+                                <td>€{{ main_course.price }}</td>
                             {% endfor %}
                         </ul>
 

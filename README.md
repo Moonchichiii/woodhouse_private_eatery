@@ -34,18 +34,16 @@
 ## Project Goals
 
   
+This restaurant project is designed to for enabling users to simply register a username and choose a password. Once registered, they can book, edit, or delete their reservations.
 
-This restaurant site is designed for efficiency, enabling users to register username and password. Once registered, they can book, edit, or delete their reservations.
+  
+Additionally, I incorporated a functionality for staff to allow them to create reservations for guests, edit or delete them
+
+, handle a menu change on the same page, login using the same login as the guests, redirecting to the management page, loggin them as staff directly.
 
   
 
-Additionally incorporated a functionality for staff, to have the capability to create reservations for guests and also manage them by editing or deleting them
-
-if needed. Handle a menu change to site on the same page, and login at the same login as guests,will be redirected to management page instead, when logged in as staff.
-
-  
-
-In terms of design, a minimalist website that's simple to navigate, and use of contrast in mind, also responsive so easily accessible across various devices.
+In terms of design, it is a minimalist website that is simple to navigate, with use of contrast in mind, and responsive so easily accessible across various devices.
 
 
 ---
@@ -55,32 +53,32 @@ In terms of design, a minimalist website that's simple to navigate, and use of c
 ### External User’s Goal
 
 
-Looking for an intuitive and accessible booking experience, without to many options keeping it simple,  
+Looking for an intuitive and accessible booking experience, without too many options, keeping it simple.  
 
-Easy Booking dashboard Enables guests to conveniently make online reservations for their preferred number of guests, on  
+A simple booking dashboard enables guests to conveniently make online reservations for their preferred number of guests.   
 
-flexible scheduling offers guests the flexibility to choose their preferred booking date and time slot, adding convenience to their planning. 
+A flexible scheduling offers guests the flexibility to choose their preferred booking date and time slot, adding convenience to their planning. 
 
-instant confirmation provides to reassure customers about their reservation details.
+An instant confirmation is displayed on the screen to reassure customers about their reservation details.
 
 ---
 
 ## User Stories
  
 
-As a guest, upon first arrival, I can easily register using a simple sign-up form based on a username and password I choose.
+On the landing page, users can easily register using a simple sign-up form based on a username and password they choose.
 
  
 
-Once logged in, my booking_id is linked to my created user account. After registration, i'm redirected to the booking dashboard where all
+Once logged in, their booking_id is linked to the user account they created. After registering, they are redirected to the booking dashboard where all
 
-my bookings are displayed. Here, I can quickly edit or cancel any of my bookings.
+their bookings are displayed. From there, they can easily edit or cancel any of their bookings.
 
   
 
-I can still navigate around the entire site as a return button appears in place of the signup/login button,
+Users can still navigate the entire site as a return button appears instead of the signup/login button,
 
-allowing me to easily navigate back to the booking dashboard.
+allowing them to easily navigate back to the booking dashboard.
 
   
 
@@ -88,20 +86,20 @@ allowing me to easily navigate back to the booking dashboard.
 
   
 
-If I have an existing booking, it's displayed as soon as I log in to the dashboard. If there are no bookings linked to my account, I can create a new reservation. The dashboard gives me the flexibility to edit or cancel any reservation, letting me adjust my plans as needed.
+If a user has an existing booking, it will be displayed as soon as the user logs in to the dashboard. If there are no bookings linked to the account, they can create a new reservation. The dashboard gives the flexibility to edit or cancel any reservation, letting the users adjust their plans as needed.
 
 
 
-The logout option is conveniently located on the dashboard and returns me to the starting point of the website.
-
-  
-  
-
-- As management
+The logout option is conveniently located on the dashboard and redirects users to the starting point of the website.
 
   
+  
 
-As a staff member, I log in with predefined credentials and am redirected to the admin panel. I need to effectively manage guests' reservations, including the ability to create, edit, or cancel bookings, and update the menu and prices.
+- As Management
+
+  
+
+Staff members log in with predefined credentials and are redirected to the admin page. Staff have the abibility to manage guests'reservations, create, edit, or cancel bookings, and update the menu and prices.
 
   
 
@@ -124,7 +122,7 @@ As a staff member, I log in with predefined credentials and am redirected to the
 
   
 
-- Location inidication Map
+- Location indication Map
 
   
 
@@ -179,7 +177,7 @@ As a staff member, I log in with predefined credentials and am redirected to the
  </p>
 
 
-After that used Justinmind to draw up the layout, and then a prebuild using codepen.io
+After that, I used Justinmind to draw up the layout, and then a prebuild using codepen.io
 
 <p>
 <img src="/readmecontent/images/layoutplan.png" alt="Image 13" width="250"/>
@@ -239,7 +237,7 @@ After that used Justinmind to draw up the layout, and then a prebuild using code
 
 ## Building out the Backend
 
-- After install the django version you want to use, start of with the command `django-admin startproject backend .` in my case, then follow up with the apps if you know from the start 
+- After install the django version you want to use, start of with the command `django-admin startproject backend .` In my case, then follow up with the apps if you know from the start 
 python manage.py startapp `accounts`, `bookings`, `frontend`, `menu`
 
 ***Backend:*** This is the project folder / base.
@@ -253,7 +251,7 @@ App ***Bookings:*** Handles the booking side of the project.
 App ***Menu:*** For managers of the site to easily change the menu and prices on the site.  
 
 
-For security reasons i concealed the `SECRET_KEY`, which have been changed during the development, and also all other `API_KEYS` and updated it since the project's inception. I also revised my `settings.py` to prepare it for future deployment on Heroku.  
+For security reasons I concealed the `SECRET_KEY`, which have been changed during the development, and also all other `API_KEYS` and updated it since the project's inception. I also revised my `settings.py` to prepare it for future deployment on Heroku.  
 
 **Discovering `.env` and Implementation:** I discovered the utility of using `.env` with `decouple` for streamlined management in `settings.py`. This approach allowed for shorter, more manageable lines in the configuration file.
 
@@ -299,7 +297,7 @@ urlpatterns = [
 
 ## Development Environment: Gitpod
 
-- Gitpod ide for the so don't have install everything on my computer and i jump in and edit from anywhere.   
+- Gitpod `ide` used for development.   
 
 ---
 
@@ -347,7 +345,7 @@ Commands:
 
 - https://www.elephantsql.com
 
-create and account and then you can create your own database, to use in your project,   
+Create an account and then you can create your own database to use in your project.   
 
 <img src="/readmecontent/images/dbschema.png" alt="Image 14" width="250"/>
 ---
@@ -359,7 +357,7 @@ create and account and then you can create your own database, to use in your pro
 
 - Cloudinary hosts static assets like stylesheets, JavaScript files, images, and videos, optimizing media file management and performance.
 
-- When you feel ready to deploy your project commands to run to upload the staticfiles and images, ( make sure you use webp images, for better preformance.)
+- When you feel ready to deploy your project, run these commands to upload the staticfiles and images, ( make sure you use webp images, for better preformance.)
 
 - `python manage.py collectstatic` you will be prompted with a yes/no option. 
 
@@ -369,9 +367,9 @@ create and account and then you can create your own database, to use in your pro
 ## Deployment
  
 
-- Setting up the settings.py before pushing it to Heroku don't forget Debbug = `False` 
+- Set up the settings.py before pushing it to Heroku, don't forget Debbug = `False` 
 
-- then pushing it to the main on github, after follow the steps below.
+- Push it to the main on github, then follow the steps below.
 
 
 - https://www.heroku.com
@@ -395,7 +393,7 @@ create and account and then you can create your own database, to use in your pro
 
    - Use the Heroku CLI to push it from your ide, or simply go to the website and connect your repositorie, and deploy directly from the site.
 
-   - If your on the site and have set your Config Vars, then go to the "Deploy tab" and scroll down to "DEPLOY BRANCH"
+   - If you are on the site and have set your Config Vars, then go to the "Deploy tab" and scroll down to "DEPLOY BRANCH"
    
    - View the build log for errors if any comes up. 
    
@@ -423,6 +421,9 @@ create and account and then you can create your own database, to use in your pro
 - Utilizing `include` tags for the login flow: [W3Schools Tutorial](https://www.w3schools.com/django/showdjango.php?filename=demo_templates_include2)
 
 - Implementing `exclude` tags: [Stack Overflow Query](https://stackoverflow.com/questions/35752873/is-it-possible-to-exclude-footer-html-which-is-included-in-base-html-when-i-exte)
+
+- https://stackoverflow.com/questions/2893724/creating-my-own-context-processor-in-django 
+
 
 </details>
 

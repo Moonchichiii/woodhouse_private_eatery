@@ -422,7 +422,7 @@ Create an account and then you can create your own database to use in your proje
 
 - Implementing `exclude` tags: [Stack Overflow Query](https://stackoverflow.com/questions/35752873/is-it-possible-to-exclude-footer-html-which-is-included-in-base-html-when-i-exte)
 
-- https://stackoverflow.com/questions/2893724/creating-my-own-context-processor-in-django 
+
 
 
 </details>

@@ -34,16 +34,16 @@
 ## Project Goals
 
   
-This restaurant project is designed to for enabling users to simply register a username and choose a password. Once registered, they can book, edit, or delete their reservations.
+This restaurant project is designed for enabling users to simply register using username and choose a password.
 
+Once registered, they can book, edit, or delete their reservations.
   
-Additionally, I incorporated a functionality for staff to allow them to create reservations for guests, edit or delete them
+Additionally, I incorporated a functionality for staff to allow them to create reservations for guests, edit or delete them.
 
-, handle a menu change on the same page, login using the same login as the guests, redirecting to the management page, loggin them as staff directly.
-
+handle a menu change on the same page, using the same login as the guests, (superuser's) redirecting to the management page.
   
 
-In terms of design, it is a minimalist website that is simple to navigate, with use of contrast in mind, and responsive so easily accessible across various devices.
+In terms of layout and design, it is a minimalist website that is simple to navigate around with few options, and it's responsive and easily accessible across various devices.
 
 
 ---
@@ -66,9 +66,7 @@ An instant confirmation is displayed on the screen to reassure customers about t
 ## User Stories
  
 
-On the landing page, users can easily register using a simple sign-up form based on a username and password they choose.
-
- 
+As a users i can easily register using a simple sign-up form based on a username and password.
 
 Once logged in, their booking_id is linked to the user account they created. After registering, they are redirected to the booking dashboard where all
 
@@ -319,13 +317,6 @@ urlpatterns = [
     <img src="/readmecontent/images/validcss.png" alt="Image 7" width="250"/>
 </p>
 
-
-- Accessscan 
-
-    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="250"/>
-
-    ***Misstakes that came up have been fixed***
-
 ***Coverage***
 
  - [Coverage report](/readmecontent/images/coverage.png)
@@ -335,6 +326,18 @@ Commands:
 1. coverage run --source='.' manage.py test
 2. coverage report
 3. coverage html
+
+- Lighthouse 
+
+    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="250"/>
+
+- Webpagetest 
+
+    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="250"/>
+
+- Accessscan 
+
+    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="250"/>
 
 
   

@@ -1,6 +1,6 @@
 # Woodhouse Bookings ***private eatery***
 
-**👉 [Link to Live Project][https://woodhouse-6b4519e75518.herokuapp.com]**
+**👉 [Link to Live Project](https://woodhouse-6b4519e75518.herokuapp.com)**
 
 
 ![screenshot](/readmecontent/images/topof.png)

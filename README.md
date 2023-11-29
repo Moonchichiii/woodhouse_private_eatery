@@ -30,19 +30,16 @@
 ---
 
 
-
 ## Project Goals
 
   
-This restaurant project is designed for enabling users to simply register using username and choose a password.
-
-Once registered, they can book, edit, or delete their reservations.
+- This restaurant project is designed for enabling users to simply register using username and choose a password, once registered, they can book, edit, or delete their reservations.
   
-Additionally, I incorporated a functionality for staff to allow them to create reservations for guests, edit or delete them.
+- Additionally, I incorporated a functionality for staff to allow them to create reservations for guests, edit or delete them.
 
-handle a menu change on the same page, using the same login as the guests, (superuser's) redirecting to the management page.  
+- Handle a menu change on the same page, using the same login as the guests, (superuser's) redirecting to the management page.  
 
-In terms of layout and design, it is a minimalist website that is simple to navigate around with few options, and it's responsive and easily accessible across various devices.
+- In terms of layout and design, it is a minimalist website that is simple to navigate around with few options, and it's responsive and easily accessible across various devices.
 
 
 ---
@@ -52,55 +49,44 @@ In terms of layout and design, it is a minimalist website that is simple to navi
 ### External User’s Goal
 
 
-Looking for an intuitive and accessible booking experience, without too many options, keeping it simple.  
+- Looking for an intuitive and accessible booking experience, without too many options, keeping it simple.  
 
-A simple booking dashboard enables guests to conveniently make online reservations for their preferred number of guests.   
+- A simple booking dashboard enables guests to conveniently make online reservations for their preferred number of guests.   
 
-A flexible scheduling offers guests the flexibility to choose their preferred booking date and time slot, adding convenience to their planning. 
+- A flexible scheduling offers guests the flexibility to choose their preferred booking date and time slot, adding convenience to their planning. 
 
-An instant confirmation is displayed on the screen to reassure customers about their reservation details.
+- An instant confirmation is displayed on the screen to reassure customers about their reservation details.
 
 ---
 
 ## User Stories
+
+- As a user, I can easily register using a simple sign-up form based on a username and password.
+
+- Once logged in, my booking_id is linked to the user account i created,
+
+- After that im directly redirected to the booking dashboard where i can easily make a booking or edit,cancel any of my bookings.
+
+
+- I can still navigate the entire site as a return button appears 
+instead of the signup/login button, allowing me to easily navigate back to the booking dashboard.
+
+
+
+- If I have an existing booking, it will be displayed as soon as I log in to the dashboard. If there are no bookings linked to my account, 
+
+- The dashboard gives me the flexibility to edit or cancel any reservation, letting me adjust my plans as needed.
+
+
+- The logout option is conveniently located on the dashboard and redirects users to the starting point of the website.
+</p>
+
  
-
-As a user, I can easily register using a simple sign-up form based on a username and password.
- 
- <img src="/readmecontent/images/user/1.png" alt="Image 10" width="150"/>
-
-Once logged in, my booking_id is linked to the user account i created,
-
-<img src="/readmecontent/images/user/2.png" alt="Image 10" width="150"/>
- 
-
-after that your directly redirected to the booking dashboard where i can easily make a booking and then  edit or cancel any of my bookings.
-
- <img src="/readmecontent/images/user/3.png" alt="Image 10" width="150"/>
-
-I can still navigate the entire site as a return button appears instead of the signup/login button, allowing me to easily navigate back to the booking dashboard.
-
- 
-<img src="/readmecontent/images/user/4.png" alt="Image 10" width="150"/>
-
-- Making a Reservation
-
-If I have an existing booking, it will be displayed as soon as I log in to the dashboard. If there are no bookings linked to my account, I can create a new reservation. The dashboard gives me the flexibility to edit or cancel any reservation, letting me adjust my plans as needed.
-
-
-
-<img src="/readmecontent/images/user/5.png" alt="Image 10" width="150"/>
-
-The logout option is conveniently located on the dashboard and redirects users to the starting point of the website.
- 
-<img src="/readmecontent/images/user/6.png" alt="Image 10" width="150"/>
-<img src="/readmecontent/images/user/7.png" alt="Image 10" width="150"/>
-
-- As Management
+***As Management***
 
   
 
-Staff members log in with predefined credentials and are redirected to the admin page. Staff have the abibility to manage guests'reservations, create, edit, or cancel bookings, and update the menu and prices.
+- Staff members log in with predefined credentials and are redirected to the admin page. Staff have the abibility to manage guests'reservations, create, edit, or cancel bookings, and update the menu and prices.
 
   
 
@@ -194,7 +180,7 @@ After that, I used Justinmind to draw up the layout, and then a prebuild using c
  
 
 **Dependencies:** Part of my setup involved incorporating a range of dependencies, crucial for the functionality of my project.
-[
+
 
 -  `asgiref==3.7.2`: Essential for ASGI support, enabling asynchronous capabilities in Django projects.
 
@@ -230,7 +216,7 @@ After that, I used Justinmind to draw up the layout, and then a prebuild using c
 
 -  `requests==2.31.0`: Simplifies making HTTP requests in Python, essential for API interactions.
 
-] 
+ 
 
 ---
 [Back to top](#)

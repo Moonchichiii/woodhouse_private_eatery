@@ -30,13 +30,11 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-DEBUG = True
-ALLOWED_HOSTS = ['*']
+DEBUG = False
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-moonchichiii-woodhouse-p-6y658zhf9s.us2.codeanyapp.com']
-#ALLOWED_HOSTS = ['woodhouse-6b4519e75518.herokuapp.com']
+ALLOWED_HOSTS = ['woodhouse-6b4519e75518.herokuapp.com']
 
-#CSRF_TRUSTED_ORIGINS = ['https://woodhouse-6b4519e75518.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://woodhouse-6b4519e75518.herokuapp.com']
 
 # Application definition
 

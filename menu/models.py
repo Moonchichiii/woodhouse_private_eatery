@@ -4,7 +4,7 @@ from django.db import models
 class Menu(models.Model):
 
     STARTER = 'Starter'
-    MAIN_COURSE = 'Main Couse'
+    MAIN_COURSE = 'Main Course'
     DESSERT = 'Dessert'
 
  

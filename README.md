@@ -329,11 +329,11 @@ Commands:
 
 - Lighthouse 
 
-    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="250"/>
+    <img src="/readmecontent/images/lighthouse.png" alt="Image 17" width="250"/>
 
 - Webpagetest 
 
-    <img src="/readmecontent/images/accessscan.png" alt="Image 17" width="250"/>
+    <img src="/readmecontent/images/webpagetest.png" alt="Image 17" width="250"/>
 
 - Accessscan 
 
